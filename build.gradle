@@ -1,10 +1,12 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.3.31'
+    id 'com.jfrog.bintray' version '1.8.4'
+    id 'maven'
 }
 
 group 'br.com.gamemods'
-version '1.0-SNAPSHOT'
+version '0.0.1'
 
 sourceSets.main.java.srcDirs = ["src/main/kotlin"]
 sourceSets.test.java.srcDirs = ["src/main/kotlin"]
@@ -26,4 +28,60 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            packaging 'jar'
+            groupId project.group
+            artifactId project.name
+            version project.version
+            name project.name
+            url "https://github.com/GameModsBR/NBT-Manipulator"
+            inceptionYear '2019'
+            licenses {
+                license {
+                    name 'MIT'
+                    url 'https://raw.githubusercontent.com/GameModsBR/NBT-Manipulator/master/LICENSE'
+                    distribution 'repo'
+                }
+            }
+            scm {
+                connection "https://github.com/GameModsBR/NBT-Manipulator.git"
+                developerConnection "https://github.com/GameModsBR/NBT-Manipulator.git"
+                url "https://github.com/GameModsBR/NBT-Manipulator"
+            }
+        }
+    }
+}
+
+bintray {
+    user = "$gamemodsBintrayUser"
+    key = "$gamemodsBintrayApiKey"
+    configurations = ['archives']
+    pkg {
+        repo = 'GameMods'
+        name = 'NBT-Manipulator'
+        userOrg = 'gamemods'
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/GameModsBR/NBT-Manipulator.git'
+        websiteUrl = 'https://github.com/GameModsBR/NBT-Manipulator'
+        //publish = false
+        version {
+            name = project.version
+            desc = "NBT-Manipulator version ${project.version}"
+            //released = new Date()
+            vcsTag = "v${project.version}"
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
 }
