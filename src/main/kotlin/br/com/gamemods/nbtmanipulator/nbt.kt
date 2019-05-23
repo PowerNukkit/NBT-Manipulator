@@ -1,3 +1,4 @@
+@file:JvmName("_NbtInternal")
 @file:Suppress("unused")
 
 package br.com.gamemods.nbtmanipulator
@@ -139,6 +140,20 @@ data class NbtCompound(var value: MutableMap<String, NbtTag>) : NbtTag() {
     fun getNullableLongArrayList(name: String) = getNullableList(name)?.cast<NbtLongArray>()
     fun getNullableCompoundList(name: String) = getNullableList(name)?.cast<NbtCompound>()
     fun getNullableListOfList(name: String) = getNullableList(name)?.cast<NbtList<*>>()
+
+    fun copyFrom(other: NbtCompound, tagName: String, default: NbtTag? = null) {
+        val tag = other[tagName] ?: default
+        if (tag != null) {
+            this[tagName] = tag
+        }
+    }
+
+    fun copyTo(other: NbtCompound, tagName: String, default: NbtTag? = null) {
+        val tag = this[tagName] ?: default
+        if (tag != null) {
+            other[tagName] = tag
+        }
+    }
 }
 
 data class NbtIntArray(var value: IntArray): NbtTag() {

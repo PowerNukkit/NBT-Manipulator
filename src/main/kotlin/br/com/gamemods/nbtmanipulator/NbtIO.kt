@@ -1,3 +1,4 @@
+@file:JvmName("_NbtIOInternal")
 @file:Suppress("unused")
 
 package br.com.gamemods.nbtmanipulator
