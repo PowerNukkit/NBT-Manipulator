@@ -1,0 +1,4 @@
+[submodule "gh-pages"]
+	path = gh-pages
+	url = https://github.com/GameModsBR/NBT-Manipulator.git
+	branch = gh-pages
