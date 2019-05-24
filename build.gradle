@@ -13,6 +13,7 @@ sourceSets.main.java.srcDirs = ["src/main/kotlin"]
 sourceSets.test.java.srcDirs = ["src/main/kotlin"]
 
 sourceCompatibility = 1.8
+targetCompatibility = sourceCompatibility
 
 repositories {
     jcenter()
