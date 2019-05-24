@@ -9,6 +9,7 @@ import java.util.zip.GZIPOutputStream
 import kotlin.reflect.KClass
 
 object NbtIO {
+    @JvmStatic
     fun writeNbtFile(outputStream: OutputStream, file: NbtFile, compressed: Boolean = true) {
         val tag = file.tag
         val typeId = tag.typeId
@@ -26,10 +27,12 @@ object NbtIO {
         }
     }
 
+    @JvmStatic
     fun writeNbtFile(file: File, tag: NbtFile, compressed: Boolean = true) {
         file.outputStream().buffered().use { writeNbtFile(it, tag, compressed); it.flush() }
     }
 
+    @JvmStatic
     fun readNbtFile(inputStream: InputStream, compressed: Boolean = true): NbtFile {
         val input = if (compressed) GZIPInputStream(inputStream) else inputStream
         val dataIn = DataInputStream(input)
@@ -42,6 +45,7 @@ object NbtIO {
         return NbtFile(name, serializer.readTag(dataIn))
     }
 
+    @JvmStatic
     fun readNbtFile(file: File, compressed: Boolean = true): NbtFile {
         return file.inputStream().buffered().use { readNbtFile(it, compressed) }
     }
