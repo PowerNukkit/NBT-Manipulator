@@ -1,4 +1,5 @@
 # NBT Manipulator
+
 This is a Kotlin/Java library that allows you to read and write NBT files and data in a clean and simple way.
 
 ## Adding to your project
@@ -6,6 +7,7 @@ This is a Kotlin/Java library that allows you to read and write NBT files and da
 The library is shared in the maven center, so you don't need to declare any custom repository.
 
 ### Gradle
+
 ```groovy
 repositories {
     mavenCentral() // or jcenter()
@@ -17,6 +19,7 @@ dependencies {
 ```
 
 ### Maven
+
 ```xml
 <dependencies>
     <dependency>
@@ -28,6 +31,7 @@ dependencies {
 ```
 
 ### Ivy
+
 ```xml
 <dependency org='br.com.gamemods' name='nbt-manipulator' rev='0.0.1'>
   <artifact name='nbt-manipulator' ext='jar' />
@@ -35,6 +39,7 @@ dependencies {
 ```
 
 ## Examples
+
 ```kotlin
 val compound = NbtCompound()
 compound["A string tag"] = "The string tag value"
