@@ -1,4 +1,4 @@
-@file:JvmName("_NbtIOInternal")
+@file:JvmName("_NbtIO_Internal")
 @file:Suppress("unused")
 
 package br.com.gamemods.nbtmanipulator
@@ -8,7 +8,16 @@ import java.util.zip.GZIPInputStream
 import java.util.zip.GZIPOutputStream
 import kotlin.reflect.KClass
 
+/**
+ * Contains usefull methods do read and write [NbtFile] from [File] and [InputStream]/[OutputStream].
+ */
 object NbtIO {
+    /**
+     * Writes the [NbtFile] in the stream.
+     * @param outputStream The stream that the file will be written
+     * @param file The file that will be written on the stream
+     * @param compressed If the file will be compressed by [GZIPOutputStream].
+     */
     @JvmStatic
     fun writeNbtFile(outputStream: OutputStream, file: NbtFile, compressed: Boolean = true) {
         val tag = file.tag
@@ -27,11 +36,22 @@ object NbtIO {
         }
     }
 
+    /**
+     * Writes the [NbtFile] in a [File].
+     * @param file The output file
+     * @param file The NBT file that will be written on the output file
+     * @param compressed If the file will be compressed by [GZIPOutputStream]
+     */
     @JvmStatic
     fun writeNbtFile(file: File, tag: NbtFile, compressed: Boolean = true) {
         file.outputStream().buffered().use { writeNbtFile(it, tag, compressed); it.flush() }
     }
 
+    /**
+     * Read a [NbtFile] from the [InputStream].
+     * @param inputStream The input stream that will be read
+     * @param compressed If the file needs to be decompressed by [GZIPInputStream]
+     */
     @JvmStatic
     fun readNbtFile(inputStream: InputStream, compressed: Boolean = true): NbtFile {
         val input = if (compressed) GZIPInputStream(inputStream) else inputStream
@@ -45,6 +65,11 @@ object NbtIO {
         return NbtFile(name, serializer.readTag(dataIn))
     }
 
+    /**
+     * Read a [NbtFile] from a [File].
+     * @param file The input file that will be read
+     * @param compressed If the file needs to be decompressed by [GZIPInputStream]
+     */
     @JvmStatic
     fun readNbtFile(file: File, compressed: Boolean = true): NbtFile {
         return file.inputStream().buffered().use { readNbtFile(it, compressed) }
