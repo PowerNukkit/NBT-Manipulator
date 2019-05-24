@@ -147,6 +147,8 @@ if (JavaVersion.current().majorVersion == "8") {
         // what to publish, this is a standard CopySpec
         contents {
             from 'src/pages'
+            from 'README.md'
+            rename ('README.md', 'index.md')
             from("$buildDir/javadoc") {
                 into 'javadoc'
             }
@@ -163,4 +165,4 @@ if (JavaVersion.current().majorVersion == "8") {
     }
 }
 
-gitPublishCopy.dependsOn dokkaJavadoc 
+gitPublishCopy.dependsOn dokkaJavadoc
