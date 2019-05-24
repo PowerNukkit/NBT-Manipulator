@@ -115,5 +115,12 @@ task sourcesJar(type: Jar) {
 
 artifacts {
     archives sourcesJar
-    archives javadocJar
+}
+
+// dokka will fail to build the javadoc jar on newest java versions
+// https://github.com/Kotlin/dokka/issues/294
+if (JavaVersion.current().majorVersion == "8") {
+    artifacts {
+        archives javadocJar
+    }
 }
