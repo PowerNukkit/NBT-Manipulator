@@ -2,7 +2,9 @@
 
 This is a Kotlin/Java library that allows you to read and write NBT files and data in a clean and simple way.
 
-[Click here to access the most recent JavaDoc](https://gamemodsbr.github.io/NBT-Manipulator/javadoc)
+Here you can find the library documentation:
+* [Java Documentation](https://gamemodsbr.github.io/NBT-Manipulator/javadoc)
+* [Kotlin Documentation]()
 
 You may also want to see the [changelog](CHANGELOG.md) file to be aware of all changes in the tool that may impact you.
 

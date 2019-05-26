@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NbtIO - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">br.com.gamemods.nbtmanipulator</a>&nbsp;/&nbsp;<a href="./index.html">NbtIO</a><br/>
+<br/>
+<h1>NbtIO</h1>
+<code><span class="keyword">object </span><span class="identifier">NbtIO</span></code>
+<p>Contains usefull methods do read and write <a href="../-nbt-file/index.html">NbtFile</a> from <a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html">File</a> and <a href="https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html">InputStream</a>/<a href="https://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html">OutputStream</a>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="read-nbt-file.html">readNbtFile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">readNbtFile</span><span class="symbol">(</span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$readNbtFile(java.io.InputStream, kotlin.Boolean)/inputStream">inputStream</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">, </span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$readNbtFile(java.io.InputStream, kotlin.Boolean)/compressed">compressed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="../-nbt-file/index.html"><span class="identifier">NbtFile</span></a></code>
+<p>Read a <a href="../-nbt-file/index.html">NbtFile</a> from the <a href="https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html">InputStream</a>.</p>
+<code><span class="keyword">fun </span><span class="identifier">readNbtFile</span><span class="symbol">(</span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$readNbtFile(java.io.File, kotlin.Boolean)/file">file</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">, </span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$readNbtFile(java.io.File, kotlin.Boolean)/compressed">compressed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="../-nbt-file/index.html"><span class="identifier">NbtFile</span></a></code>
+<p>Read a <a href="../-nbt-file/index.html">NbtFile</a> from a <a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html">File</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="write-nbt-file.html">writeNbtFile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">writeNbtFile</span><span class="symbol">(</span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$writeNbtFile(java.io.OutputStream, br.com.gamemods.nbtmanipulator.NbtFile, kotlin.Boolean)/outputStream">outputStream</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html"><span class="identifier">OutputStream</span></a><span class="symbol">, </span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$writeNbtFile(java.io.OutputStream, br.com.gamemods.nbtmanipulator.NbtFile, kotlin.Boolean)/file">file</span><span class="symbol">:</span>&nbsp;<a href="../-nbt-file/index.html"><span class="identifier">NbtFile</span></a><span class="symbol">, </span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$writeNbtFile(java.io.OutputStream, br.com.gamemods.nbtmanipulator.NbtFile, kotlin.Boolean)/compressed">compressed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Writes the <a href="../-nbt-file/index.html">NbtFile</a> in the stream.</p>
+<code><span class="keyword">fun </span><span class="identifier">writeNbtFile</span><span class="symbol">(</span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$writeNbtFile(java.io.File, br.com.gamemods.nbtmanipulator.NbtFile, kotlin.Boolean)/file">file</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">, </span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$writeNbtFile(java.io.File, br.com.gamemods.nbtmanipulator.NbtFile, kotlin.Boolean)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="../-nbt-file/index.html"><span class="identifier">NbtFile</span></a><span class="symbol">, </span><span class="identifier" id="br.com.gamemods.nbtmanipulator.NbtIO$writeNbtFile(java.io.File, br.com.gamemods.nbtmanipulator.NbtFile, kotlin.Boolean)/compressed">compressed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Writes the <a href="../-nbt-file/index.html">NbtFile</a> in a <a href="https://docs.oracle.com/javase/6/docs/api/java/io/File.html">File</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NbtTag - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="index.html">br.com.gamemods.nbtmanipulator</a>&nbsp;/&nbsp;<a href="./-nbt-tag.html">NbtTag</a><br/>
+<br/>
+<h1>NbtTag</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">NbtTag</span></code>
+<p>The base class for Nbt Tags. All tag values are mutable.</p>
+<p>Do not create new classes extending it.</p>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-nbt-byte/index.html">NbtByte</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtByte</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a byte value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-byte-array/index.html">NbtByteArray</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtByteArray</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a mutable byte array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-compound/index.html">NbtCompound</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtCompound</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A key-value mapping tag similar to <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-double/index.html">NbtDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtDouble</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a double value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-end.html">NbtEnd</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">NbtEnd</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A special tag which indicates the end of a compound stream or empty lists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-float/index.html">NbtFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtFloat</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a float value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-int/index.html">NbtInt</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtInt</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps an int value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-int-array/index.html">NbtIntArray</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtIntArray</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a mutable int array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-list/index.html">NbtList</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtList</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a mutable list of <a href="./-nbt-tag.html">NbtTag</a>s. All items in the list must have the same class.
+Null values in the list are not allowed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-long/index.html">NbtLong</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtLong</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a long value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-long-array/index.html">NbtLongArray</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtLongArray</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a mutable long array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-short/index.html">NbtShort</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtShort</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a short value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-nbt-string/index.html">NbtString</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">NbtString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-nbt-tag.html"><span class="identifier">NbtTag</span></a></code>
+<p>A tag which wraps a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

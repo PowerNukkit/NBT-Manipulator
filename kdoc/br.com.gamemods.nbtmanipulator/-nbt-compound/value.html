@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NbtCompound.value - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">br.com.gamemods.nbtmanipulator</a>&nbsp;/&nbsp;<a href="index.html">NbtCompound</a>&nbsp;/&nbsp;<a href="./value.html">value</a><br/>
+<br/>
+<h1>value</h1>
+<a name="br.com.gamemods.nbtmanipulator.NbtCompound$value"></a>
+<code><span class="keyword">var </span><span class="identifier">value</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="../-nbt-tag.html"><span class="identifier">NbtTag</span></a><span class="symbol">&gt;</span></code>
+<p>The wrapped <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a> which contains all key-value mappings.
+The map instance will be linked so any modification will also change the tag mappings.</p>
+<p>All get functions which are not prefixed with <code>Nullable</code> and <a href="get.html">NbtCompound.get</a> will throw a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-class-cast-exception/index.html">ClassCastException</a>
+if the tag is mapped to a different class then the method used. For example if a given compound
+have a example=NbtInt(2) and you try to read it using <a href="get-short.html">NbtCompound.getShort</a>, an exception will be thrown.</p>
+<p>All get functions which are not prefixed with <code>Nullable</code> and <a href="get.html">NbtCompound.get</a> will throw <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-type-cast-exception/index.html">TypeCastException</a>
+if no value is mapped to the given name. This will change in future.</p>
+<h3>Property</h3>
+<p><a name="value"></a>
+<code>value</code> - 
+<p>The wrapped <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a> which contains all key-value mappings.
+The map instance will be linked so any modification will also change the tag mappings.</p>
+
+
+<p>All get functions which are not prefixed with <code>Nullable</code> and <a href="get.html">NbtCompound.get</a> will throw a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-class-cast-exception/index.html">ClassCastException</a>
+if the tag is mapped to a different class then the method used. For example if a given compound
+have a example=NbtInt(2) and you try to read it using <a href="get-short.html">NbtCompound.getShort</a>, an exception will be thrown.</p>
+
+
+<p>All get functions which are not prefixed with <code>Nullable</code> and <a href="get.html">NbtCompound.get</a> will throw <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-type-cast-exception/index.html">TypeCastException</a>
+if no value is mapped to the given name. This will change in future.</p>
+</p>
+</BODY>
+</HTML>
