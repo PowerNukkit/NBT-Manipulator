@@ -1,8 +1,4 @@
----
-title: NbtCompound.getNullableDouble - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableDouble](./get-nullable-double.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableDouble](./get-nullable-double.md)
 
 # getNullableDouble
 

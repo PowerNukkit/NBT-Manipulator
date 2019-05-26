@@ -1,8 +1,4 @@
----
-title: NbtLongArray.value - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtLongArray](index.html) / [value](./value.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtLongArray](index.md) / [value](./value.md)
 
 # value
 

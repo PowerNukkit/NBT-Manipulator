@@ -1,8 +1,4 @@
----
-title: NbtCompound.getNullableInt - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableInt](./get-nullable-int.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableInt](./get-nullable-int.md)
 
 # getNullableInt
 

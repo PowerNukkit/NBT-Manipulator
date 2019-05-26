@@ -1,8 +1,4 @@
----
-title: NbtCompound.getLongArray - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getLongArray](./get-long-array.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getLongArray](./get-long-array.md)
 
 # getLongArray
 
@@ -13,6 +9,6 @@ also change wrapper and the mapped value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtLongArray](../-nbt-long-array/index.html)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtLongArray](../-nbt-long-array/index.md)
 
 `TypeCastException` - If no value exists for that name

@@ -1,20 +1,19 @@
----
-title: NbtFloat - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtFloat](./index.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtFloat](./index.md)
 
 # NbtFloat
 
-`data class NbtFloat : `[`NbtTag`](../-nbt-tag.html)
+`data class NbtFloat : `[`NbtTag`](../-nbt-tag.md)
 
 A tag which wraps a float value.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `NbtFloat(value: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`)`<br>A tag which wraps a float value. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `NbtFloat(value: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`)`<br>A tag which wraps a float value. |
 
 ### Properties
 
-| [value](value.html) | `var value: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)<br>The wrapped value |
-
+| Name | Summary |
+|---|---|
+| [value](value.md) | `var value: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)<br>The wrapped value |

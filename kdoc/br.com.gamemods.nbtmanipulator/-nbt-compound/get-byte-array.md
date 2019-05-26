@@ -1,8 +1,4 @@
----
-title: NbtCompound.getByteArray - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getByteArray](./get-byte-array.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getByteArray](./get-byte-array.md)
 
 # getByteArray
 
@@ -13,6 +9,6 @@ also change wrapper and the mapped value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtByteArray](../-nbt-byte-array/index.html)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtByteArray](../-nbt-byte-array/index.md)
 
 `TypeCastException` - If no value exists for that name

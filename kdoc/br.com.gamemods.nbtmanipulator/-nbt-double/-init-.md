@@ -1,8 +1,4 @@
----
-title: NbtDouble.<init> - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtDouble](index.html) / [&lt;init&gt;](./-init-.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtDouble](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

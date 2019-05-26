@@ -1,8 +1,4 @@
----
-title: NbtCompound.getNullableShort - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableShort](./get-nullable-short.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableShort](./get-nullable-short.md)
 
 # getNullableShort
 

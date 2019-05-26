@@ -1,8 +1,4 @@
----
-title: NbtCompound.getNullableFloat - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableFloat](./get-nullable-float.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableFloat](./get-nullable-float.md)
 
 # getNullableFloat
 

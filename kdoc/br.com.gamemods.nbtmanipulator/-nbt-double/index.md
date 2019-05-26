@@ -1,20 +1,19 @@
----
-title: NbtDouble - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtDouble](./index.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtDouble](./index.md)
 
 # NbtDouble
 
-`data class NbtDouble : `[`NbtTag`](../-nbt-tag.html)
+`data class NbtDouble : `[`NbtTag`](../-nbt-tag.md)
 
 A tag which wraps a double value.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `NbtDouble(value: `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`)`<br>A tag which wraps a double value. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `NbtDouble(value: `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`)`<br>A tag which wraps a double value. |
 
 ### Properties
 
-| [value](value.html) | `var value: `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>The wrapped value |
-
+| Name | Summary |
+|---|---|
+| [value](value.md) | `var value: `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>The wrapped value |

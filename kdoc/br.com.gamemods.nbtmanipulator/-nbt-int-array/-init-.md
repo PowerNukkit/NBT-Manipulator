@@ -1,8 +1,4 @@
----
-title: NbtIntArray.<init> - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtIntArray](index.html) / [&lt;init&gt;](./-init-.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtIntArray](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

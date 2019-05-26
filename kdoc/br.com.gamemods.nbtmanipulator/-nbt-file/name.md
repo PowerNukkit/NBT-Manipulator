@@ -1,8 +1,4 @@
----
-title: NbtFile.name - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtFile](index.html) / [name](./name.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtFile](index.md) / [name](./name.md)
 
 # name
 
