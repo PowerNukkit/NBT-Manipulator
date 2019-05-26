@@ -104,6 +104,11 @@ task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
     outputDirectory = "$buildDir/javadoc"
 }
 
+task dokkaKdoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = 'jekyll'
+    outputDirectory = "$buildDir/kdoc"
+}
+
 task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
     classifier = 'javadoc'
     from dokkaJavadoc.outputDirectory
@@ -167,6 +172,9 @@ if (JavaVersion.current().majorVersion == "8") {
             from("$buildDir/javadoc") {
                 into 'javadoc'
             }
+            from("$buildDir/kdoc") {
+                into 'kdoc'
+            }
         }
 
         // what to keep in the existing branch (include=keep)
@@ -181,3 +189,4 @@ if (JavaVersion.current().majorVersion == "8") {
 }
 
 gitPublishCopy.dependsOn dokkaJavadoc
+gitPublishCopy.dependsOn dokkaKdoc
