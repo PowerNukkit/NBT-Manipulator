@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableString](./get-nullable-string.md)
+---
+title: NbtCompound.getNullableString - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableString](./get-nullable-string.html)
 
 # getNullableString
 

@@ -1,19 +1,20 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtShort](./index.md)
+---
+title: NbtShort - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtShort](./index.html)
 
 # NbtShort
 
-`data class NbtShort : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtShort : `[`NbtTag`](../-nbt-tag.html)
 
 A tag which wraps a short value.
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `NbtShort(value: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)`)`<br>A tag which wraps a short value. |
+| [&lt;init&gt;](-init-.html) | `NbtShort(value: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)`)`<br>A tag which wraps a short value. |
 
 ### Properties
 
-| Name | Summary |
-|---|---|
-| [value](value.md) | `var value: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)<br>The wrapped value |
+| [value](value.html) | `var value: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)<br>The wrapped value |
+

@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getString](./get-string.md)
+---
+title: NbtCompound.getString - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getString](./get-string.html)
 
 # getString
 
@@ -8,6 +12,6 @@ Returns the unwrapped string value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtString](../-nbt-string/index.md)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtString](../-nbt-string/index.html)
 
 `TypeCastException` - If no value exists for that name

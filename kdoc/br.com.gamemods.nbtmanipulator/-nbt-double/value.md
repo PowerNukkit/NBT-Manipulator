@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtDouble](index.md) / [value](./value.md)
+---
+title: NbtDouble.value - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtDouble](index.html) / [value](./value.html)
 
 # value
 

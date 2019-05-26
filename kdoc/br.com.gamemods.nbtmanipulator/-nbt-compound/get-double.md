@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getDouble](./get-double.md)
+---
+title: NbtCompound.getDouble - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getDouble](./get-double.html)
 
 # getDouble
 
@@ -8,6 +12,6 @@ Returns the unwrapped double value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtDouble](../-nbt-double/index.md)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtDouble](../-nbt-double/index.html)
 
 `TypeCastException` - If no value exists for that name

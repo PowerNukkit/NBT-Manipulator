@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableLong](./get-nullable-long.md)
+---
+title: NbtCompound.getNullableLong - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableLong](./get-nullable-long.html)
 
 # getNullableLong
 

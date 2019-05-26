@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtString](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: NbtString.<init> - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtString](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

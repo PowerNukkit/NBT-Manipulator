@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableIntArray](./get-nullable-int-array.md)
+---
+title: NbtCompound.getNullableIntArray - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableIntArray](./get-nullable-int-array.html)
 
 # getNullableIntArray
 

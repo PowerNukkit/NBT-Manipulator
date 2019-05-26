@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtIntArray](index.md) / [equals](./equals.md)
+---
+title: NbtIntArray.equals - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtIntArray](index.html) / [equals](./equals.html)
 
 # equals
 

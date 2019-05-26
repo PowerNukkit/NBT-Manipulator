@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableByte](./get-nullable-byte.md)
+---
+title: NbtCompound.getNullableByte - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableByte](./get-nullable-byte.html)
 
 # getNullableByte
 

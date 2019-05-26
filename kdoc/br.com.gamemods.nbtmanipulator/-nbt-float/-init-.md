@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtFloat](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: NbtFloat.<init> - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtFloat](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

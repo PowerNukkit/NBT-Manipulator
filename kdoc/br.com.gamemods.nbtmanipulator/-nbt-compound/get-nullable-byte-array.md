@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableByteArray](./get-nullable-byte-array.md)
+---
+title: NbtCompound.getNullableByteArray - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableByteArray](./get-nullable-byte-array.html)
 
 # getNullableByteArray
 

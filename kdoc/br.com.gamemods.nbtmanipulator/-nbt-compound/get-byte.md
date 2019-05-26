@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getByte](./get-byte.md)
+---
+title: NbtCompound.getByte - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getByte](./get-byte.html)
 
 # getByte
 
@@ -8,6 +12,6 @@ Returns the unwrapped byte value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtByte](../-nbt-byte/index.md)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtByte](../-nbt-byte/index.html)
 
 `TypeCastException` - If no value exists for that name

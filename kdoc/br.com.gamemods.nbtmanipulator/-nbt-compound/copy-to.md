@@ -1,8 +1,12 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [copyTo](./copy-to.md)
+---
+title: NbtCompound.copyTo - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [copyTo](./copy-to.html)
 
 # copyTo
 
-`fun copyTo(other: `[`NbtCompound`](index.md)`, tagName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, default: `[`NbtTag`](../-nbt-tag.md)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun copyTo(other: `[`NbtCompound`](index.html)`, tagName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, default: `[`NbtTag`](../-nbt-tag.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Checks if the this compound have a given tag, if it has then place it in the other compound.
 

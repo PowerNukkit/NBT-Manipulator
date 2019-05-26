@@ -1,4 +1,8 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtByteArray](index.md) / [hashCode](./hash-code.md)
+---
+title: NbtByteArray.hashCode - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtByteArray](index.html) / [hashCode](./hash-code.html)
 
 # hashCode
 

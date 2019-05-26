@@ -1,8 +1,12 @@
-[br.com.gamemods.nbtmanipulator](index.md) / [NbtEnd](./-nbt-end.md)
+---
+title: NbtEnd - 
+---
+
+[br.com.gamemods.nbtmanipulator](index.html) / [NbtEnd](./-nbt-end.html)
 
 # NbtEnd
 
-`object NbtEnd : `[`NbtTag`](-nbt-tag.md)
+`object NbtEnd : `[`NbtTag`](-nbt-tag.html)
 
 A special tag which indicates the end of a compound stream or empty lists.
 

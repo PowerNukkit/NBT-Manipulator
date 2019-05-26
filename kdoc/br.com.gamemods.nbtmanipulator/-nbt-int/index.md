@@ -1,19 +1,20 @@
-[br.com.gamemods.nbtmanipulator](../index.md) / [NbtInt](./index.md)
+---
+title: NbtInt - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtInt](./index.html)
 
 # NbtInt
 
-`data class NbtInt : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtInt : `[`NbtTag`](../-nbt-tag.html)
 
 A tag which wraps an int value.
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `NbtInt(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>A tag which wraps an int value. |
+| [&lt;init&gt;](-init-.html) | `NbtInt(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>A tag which wraps an int value. |
 
 ### Properties
 
-| Name | Summary |
-|---|---|
-| [value](value.md) | `var value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>The wrapped value |
+| [value](value.html) | `var value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>The wrapped value |
+
