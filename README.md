@@ -37,10 +37,11 @@ dependencies {
 ### Ivy
 
 ```xml
-<dependency org='br.com.gamemods' name='nbt-manipulator' rev='0.0.1'>
-  <artifact name='nbt-manipulator' ext='jar' />
-</dependency>
+<dependency org="br.com.gamemods" name="nbt-manipulator" rev="0.0.1"/>
 ```
+
+### Direct JAR
+Download it from [maven central](http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/).
 
 ## Examples
 
