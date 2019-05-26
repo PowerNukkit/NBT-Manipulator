@@ -1,0 +1,15 @@
+---
+title: NbtCompound.getNullableLongArray - 
+---
+
+[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableLongArray](./get-nullable-long-array.html)
+
+# getNullableLongArray
+
+`fun getNullableLongArray(name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`LongArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long-array/index.html)`?`
+
+Returns the unwrapped long array value. The array will be linked and any modification will
+also change wrapper and the mapped value.
+
+Will return null if no value is mapped or it is mapped to an other type tag.
+
