@@ -162,6 +162,7 @@ if (JavaVersion.current().majorVersion == "8") {
         contents {
             from 'src/pages'
             from 'README.md'
+            from 'CHANGELOG.md'
             rename ('README.md', 'index.md')
             from("$buildDir/javadoc") {
                 into 'javadoc'
