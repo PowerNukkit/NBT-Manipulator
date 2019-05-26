@@ -20,6 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - API to freely manipulate NBT data loaded in memory
 
 [Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/a8f41900b32740648752ff214581eb8da0f928f6..v1.0.0
+[0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/a8f41900b32740648752ff214581eb8da0f928f6..v1.0.0
 
 [Download 0.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.1/
