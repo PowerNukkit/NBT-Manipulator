@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Static methods for java users calling `NbtIO`
-- Changed the targetCompatibility to Java 8
 - Documentation to all public types, functions and properties
 
 ### Changed
 - JavaDoc will not generate when building on Java 9+ due to a dokka issue
+- The targetCompatibility to Java 8
 
 ## [0.0.1] - 2019-05-23
 ### Added
