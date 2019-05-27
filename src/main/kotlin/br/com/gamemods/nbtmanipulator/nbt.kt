@@ -260,7 +260,7 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
      * The given tag will be linked, so modifications to it will also affects the compound value.
      */
     operator fun set(key: String, value: NbtTag) {
-        this[key] = value
+        put(key, value)
     }
 
     /**
