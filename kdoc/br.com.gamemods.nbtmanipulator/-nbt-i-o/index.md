@@ -4,7 +4,7 @@
 
 `object NbtIO`
 
-Contains usefull methods do read and write [NbtFile](../-nbt-file/index.md) from [File](https://docs.oracle.com/javase/6/docs/api/java/io/File.html) and [InputStream](https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html)/[OutputStream](https://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html).
+Contains useful methods do read and write [NbtFile](../-nbt-file/index.md) from [File](https://docs.oracle.com/javase/6/docs/api/java/io/File.html) and [InputStream](https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html)/[OutputStream](https://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html).
 
 ### Functions
 

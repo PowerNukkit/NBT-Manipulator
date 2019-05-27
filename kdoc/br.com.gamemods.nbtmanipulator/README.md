@@ -15,7 +15,7 @@
 | [NbtFloat](-nbt-float/index.md) | `data class NbtFloat : `[`NbtTag`](-nbt-tag.md)<br>A tag which wraps a float value. |
 | [NbtInt](-nbt-int/index.md) | `data class NbtInt : `[`NbtTag`](-nbt-tag.md)<br>A tag which wraps an int value. |
 | [NbtIntArray](-nbt-int-array/index.md) | `data class NbtIntArray : `[`NbtTag`](-nbt-tag.md)<br>A tag which wraps a mutable int array. |
-| [NbtIO](-nbt-i-o/index.md) | `object NbtIO`<br>Contains usefull methods do read and write [NbtFile](-nbt-file/index.md) from [File](https://docs.oracle.com/javase/6/docs/api/java/io/File.html) and [InputStream](https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html)/[OutputStream](https://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html). |
+| [NbtIO](-nbt-i-o/index.md) | `object NbtIO`<br>Contains useful methods do read and write [NbtFile](-nbt-file/index.md) from [File](https://docs.oracle.com/javase/6/docs/api/java/io/File.html) and [InputStream](https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html)/[OutputStream](https://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html). |
 | [NbtList](-nbt-list/index.md) | `data class NbtList<T : `[`NbtTag`](-nbt-tag.md)`> : `[`NbtTag`](-nbt-tag.md)<br>A tag which wraps a mutable list of [NbtTag](-nbt-tag.md)s. All items in the list must have the same class. Null values in the list are not allowed. |
 | [NbtLong](-nbt-long/index.md) | `data class NbtLong : `[`NbtTag`](-nbt-tag.md)<br>A tag which wraps a long value. |
 | [NbtLongArray](-nbt-long-array/index.md) | `data class NbtLongArray : `[`NbtTag`](-nbt-tag.md)<br>A tag which wraps a mutable long array. |
@@ -27,4 +27,4 @@
 
 | Name | Summary |
 |---|---|
-| [NbtList](-nbt-list.md) | `fun <T : `[`NbtTag`](-nbt-tag.md)`> NbtList(list: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](-nbt-list.md#T)`>): `[`NbtList`](-nbt-list/index.md)`<`[`T`](-nbt-list.md#T)`>`<br>Creates a new mutable list based on the given list and then wrappes it into a [NbtList](-nbt-list/index.md). |
+| [NbtList](-nbt-list.md) | `fun <T : `[`NbtTag`](-nbt-tag.md)`> NbtList(list: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](-nbt-list.md#T)`>): `[`NbtList`](-nbt-list/index.md)`<`[`T`](-nbt-list.md#T)`>`<br>Creates a new mutable list based on the given list and then wrappers it into a [NbtList](-nbt-list/index.md). |

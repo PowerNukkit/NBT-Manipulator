@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+Click the link above to see the future.
+
+## [0.0.2] - 2019-05-27 
+[Downloads from maven central.][Download 0.0.1]
 ### Added
 - Static methods for java users calling `NbtIO`
 - Documentation to all public types, functions and properties
+- The methods `NbtCompound.remove(String)`, `NbtCompound.remove(String, NbtTag)` and `NbtCompound.minusAssign(String)`
 
 ### Changed
 - JavaDoc will not generate when building on Java 9+ due to a dokka issue
@@ -20,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - API to freely manipulate NBT data loaded in memory
 
 [Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1...HEAD
+[0.0.2]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1..v0.0.2
 [0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.0..v0.0.1
 
+[Download 0.0.2]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.2/
 [Download 0.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.1/
