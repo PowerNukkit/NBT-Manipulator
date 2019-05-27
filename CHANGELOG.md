@@ -9,6 +9,8 @@ Click the link above to see the future.
 
 ## [1.0.0] - 2019-05-27
 [Downloads from maven central.][Download 1.0.0]
+
+[Kotlin Documentation][KDoc 1.0.0]
 ### Added
 - `deepClone` method to all tags
 - `require` method to `NbtCompound`
@@ -48,3 +50,5 @@ Useful for Java users and who couldn't get the sources or javadoc.
 [Download 1.0.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.0.0/
 [Download 0.0.2]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.2/
 [Download 0.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.1/
+
+[KDoc 1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/ce1e271f608b95199fd71743db63ef5f81fda868/kdoc/br.com.gamemods.nbtmanipulator/index.md
