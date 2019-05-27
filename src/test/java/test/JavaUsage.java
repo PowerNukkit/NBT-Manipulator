@@ -25,6 +25,13 @@ public class JavaUsage {
 
     @Test
     public void nbtList() {
-        NbtList<NbtInt> tags = new NbtList<>(new NbtInt(1), new NbtInt(2), new NbtInt(3));
+        NbtList<NbtInt> tags = NbtList.create(1, 2, 3);
+    }
+
+    @Test public void createSublist() {
+        NbtList<NbtList<NbtInt>> tags = NbtList.createIntSublist(
+                new int[]{1,2,3},
+                new int[]{4,5,6}
+        );
     }
 }

@@ -202,6 +202,142 @@ class NbtList<T: NbtTag>(tags: Collection<T>): NbtTag(), MutableList<T> by tags.
      * Returns a new NbtList with all nested values copied deeply.
      */
     override fun deepCopy() = NbtList(map { it.deepCopy() as T })
+
+    /**
+     * Contains useful methods to create [NbtList]s from Java.
+     *
+     * Kotlin users may call `list(1,2,3).toNbtList()` or similar methods.
+     */
+    companion object {
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Byte) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Short) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Int) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Long) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Float) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Double) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: String) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: ByteArray) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: IntArray) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: LongArray) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Map<String, NbtTag>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun create(vararg tags: Iterable<NbtTag>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createByteSublist(vararg tags: Iterable<Byte>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createByteSublist(vararg tags: Array<Byte>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createByteSublist(vararg tags: ByteArray) = tags.map { it.asIterable() }.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createShortSublist(vararg tags: Iterable<Short>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createShortSublist(vararg tags: Array<Short>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createShortSublist(vararg tags: ShortArray) = tags.map { it.asIterable() }.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createIntSublist(vararg tags: Iterable<Int>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createIntSublist(vararg tags: Array<Int>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createIntSublist(vararg tags: IntArray) = tags.map { it.asIterable() }.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createFloatSublist(vararg tags: Iterable<Float>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createFloatSublist(vararg tags: Array<Float>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createFloatSublist(vararg tags: FloatArray) = tags.map { it.asIterable() }.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createDoubleSublist(vararg tags: Iterable<Double>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createDoubleSublist(vararg tags: Array<Double>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createDoubleSublist(vararg tags: DoubleArray) = tags.map { it.asIterable() }.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createStringSublist(vararg tags: Iterable<String>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createStringSublist(vararg tags: Array<String>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createCompoundSublist(vararg tags: Iterable<Map<String, NbtTag>>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createCompoundSublist(vararg tags: Array<Map<String, NbtTag>>) = tags.toNbtList()
+        /**
+         * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
+         */
+        @JvmStatic fun createSublist(vararg tags: Iterable<Iterable<NbtTag>>) = tags.toNbtList()
+    }
 }
 
 /**
