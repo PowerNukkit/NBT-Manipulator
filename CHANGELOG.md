@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 Click the link above to see the future.
+### Added
+- New constructor to `NbtList` which accepts an other `NbtList` to resolve an ambiguity call in this scenario.
+- `toNbtList()` extension function to many combinations of `Iterable` which contains valid values for `NbtList`, including list of list.
 
 ## [1.0.1] - 2019-05-27
 [Downloads from maven central.][Download 1.0.1]
