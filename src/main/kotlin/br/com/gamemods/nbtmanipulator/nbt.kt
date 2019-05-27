@@ -173,12 +173,7 @@ data class NbtString(var value: String): NbtTag() {
  * @param T The type of the tag that will be wrapped. [NbtEnd] and [NbtTag] are not valid.
  */
 @Suppress("UNCHECKED_CAST")
-class NbtList<T: NbtTag>
-    /**
-     * Uses all tags as initial value of this list. Make sure to use the same class in all values.
-     */
-    constructor(tags: Collection<T>): NbtTag(), MutableList<T>
-by tags.toMutableList() {
+class NbtList<T: NbtTag>(tags: Collection<T>): NbtTag(), MutableList<T> by tags.toMutableList() {
     /**
      * Creates a empty list.
      */
@@ -198,6 +193,11 @@ by tags.toMutableList() {
      * Uses all tags as initial value of this list. Make sure to use the same class in all values.
      */
     constructor(tags: Sequence<T>): this(tags.toList())
+
+    /**
+     * Uses all tags as initial value of this list. Make sure to use the same class in all values.
+     */
+    constructor(tags: NbtList<T>): this(tags as Collection<T>)
 
     /**
      * Returns a new NbtList with all nested values copied deeply.
