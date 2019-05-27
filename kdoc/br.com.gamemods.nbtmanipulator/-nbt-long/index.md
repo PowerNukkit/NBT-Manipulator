@@ -1,20 +1,19 @@
----
-title: NbtLong - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtLong](./index.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtLong](./index.md)
 
 # NbtLong
 
-`data class NbtLong : `[`NbtTag`](../-nbt-tag.html)
+`data class NbtLong : `[`NbtTag`](../-nbt-tag.md)
 
 A tag which wraps a long value.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `NbtLong(value: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`)`<br>A tag which wraps a long value. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `NbtLong(value: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`)`<br>A tag which wraps a long value. |
 
 ### Properties
 
-| [value](value.html) | `var value: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)<br>The wrapped value |
-
+| Name | Summary |
+|---|---|
+| [value](value.md) | `var value: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)<br>The wrapped value |

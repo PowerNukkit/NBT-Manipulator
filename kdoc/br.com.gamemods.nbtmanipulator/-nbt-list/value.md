@@ -1,12 +1,8 @@
----
-title: NbtList.value - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtList](index.html) / [value](./value.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtList](index.md) / [value](./value.md)
 
 # value
 
-`var value: `[`MutableList`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html)`<`[`T`](index.html#T)`>`
+`var value: `[`MutableList`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html)`<`[`T`](index.md#T)`>`
 
 The wrapped mutable list. It must implement all optional methods.
 The list instance will be linked so any modification will also change the tag value.
@@ -18,4 +14,4 @@ The list instance will be linked so any modification will also change the tag va
 
 ### Parameters
 
-`T` - The type of the tag that will be wrapped. [NbtEnd](../-nbt-end.html) and [NbtTag](../-nbt-tag.html) are not valid.
+`T` - The type of the tag that will be wrapped. [NbtEnd](../-nbt-end.md) and [NbtTag](../-nbt-tag.md) are not valid.

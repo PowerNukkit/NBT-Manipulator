@@ -1,8 +1,4 @@
----
-title: NbtCompound.getIntArray - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getIntArray](./get-int-array.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getIntArray](./get-int-array.md)
 
 # getIntArray
 
@@ -13,6 +9,6 @@ also change wrapper and the mapped value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtIntArray](../-nbt-int-array/index.html)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtIntArray](../-nbt-int-array/index.md)
 
 `TypeCastException` - If no value exists for that name

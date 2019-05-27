@@ -1,25 +1,26 @@
----
-title: NbtLongArray - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtLongArray](./index.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtLongArray](./index.md)
 
 # NbtLongArray
 
-`data class NbtLongArray : `[`NbtTag`](../-nbt-tag.html)
+`data class NbtLongArray : `[`NbtTag`](../-nbt-tag.md)
 
 A tag which wraps a mutable long array.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `NbtLongArray(value: `[`LongArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long-array/index.html)`)`<br>A tag which wraps a mutable long array. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `NbtLongArray(value: `[`LongArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long-array/index.html)`)`<br>A tag which wraps a mutable long array. |
 
 ### Properties
 
-| [value](value.html) | `var value: `[`LongArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long-array/index.html)<br>The wrapped value |
+| Name | Summary |
+|---|---|
+| [value](value.md) | `var value: `[`LongArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long-array/index.html)<br>The wrapped value |
 
 ### Functions
 
-| [equals](equals.html) | `fun equals(other: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Properly checks the equality of the array. |
-| [hashCode](hash-code.html) | `fun hashCode(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Properly calculates the hashcode of the array. |
-
+| Name | Summary |
+|---|---|
+| [equals](equals.md) | `fun equals(other: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Properly checks the equality of the array. |
+| [hashCode](hash-code.md) | `fun hashCode(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Properly calculates the hashcode of the array. |

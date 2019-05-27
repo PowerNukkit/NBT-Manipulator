@@ -1,8 +1,4 @@
----
-title: NbtFloat.value - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtFloat](index.html) / [value](./value.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtFloat](index.md) / [value](./value.md)
 
 # value
 

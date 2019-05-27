@@ -1,8 +1,4 @@
----
-title: NbtCompound.getInt - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getInt](./get-int.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getInt](./get-int.md)
 
 # getInt
 
@@ -12,6 +8,6 @@ Returns the unwrapped int value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtInt](../-nbt-int/index.html)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtInt](../-nbt-int/index.md)
 
 `TypeCastException` - If no value exists for that name

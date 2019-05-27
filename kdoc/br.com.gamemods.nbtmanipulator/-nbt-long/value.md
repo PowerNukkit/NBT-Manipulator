@@ -1,8 +1,4 @@
----
-title: NbtLong.value - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtLong](index.html) / [value](./value.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtLong](index.md) / [value](./value.md)
 
 # value
 

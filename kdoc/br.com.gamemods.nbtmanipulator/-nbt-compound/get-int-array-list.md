@@ -1,20 +1,16 @@
----
-title: NbtCompound.getIntArrayList - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getIntArrayList](./get-int-array-list.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getIntArrayList](./get-int-array-list.md)
 
 # getIntArrayList
 
-`fun getIntArrayList(name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`NbtList`](../-nbt-list/index.html)`<`[`NbtIntArray`](../-nbt-int-array/index.html)`>`
+`fun getIntArrayList(name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`NbtList`](../-nbt-list/index.md)`<`[`NbtIntArray`](../-nbt-int-array/index.md)`>`
 
-Returns the [NbtList](../-nbt-list/index.html) of int arrays mapped to that name. The tag and it's value will be linked and any modification will
+Returns the [NbtList](../-nbt-list/index.md) of int arrays mapped to that name. The tag and it's value will be linked and any modification will
 also change the mapped value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtList](../-nbt-list/index.html)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtList](../-nbt-list/index.md)
 
 `TypeCastException` - If no value exists for that name
 
-`IllegalStateException` - If the list is not empty and contains any tag with class different then [NbtIntArray](../-nbt-int-array/index.html)
+`IllegalStateException` - If the list is not empty and contains any tag with class different then [NbtIntArray](../-nbt-int-array/index.md)

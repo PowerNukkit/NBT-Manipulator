@@ -1,8 +1,4 @@
----
-title: NbtCompound.getShort - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getShort](./get-short.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getShort](./get-short.md)
 
 # getShort
 
@@ -12,6 +8,6 @@ Returns the unwrapped short value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtShort](../-nbt-short/index.html)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtShort](../-nbt-short/index.md)
 
 `TypeCastException` - If no value exists for that name

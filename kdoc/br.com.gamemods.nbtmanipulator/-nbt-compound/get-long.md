@@ -1,8 +1,4 @@
----
-title: NbtCompound.getLong - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getLong](./get-long.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getLong](./get-long.md)
 
 # getLong
 
@@ -12,6 +8,6 @@ Returns the unwrapped long value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.html) is not a [NbtLongArray](../-nbt-long-array/index.html)
+`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtLongArray](../-nbt-long-array/index.md)
 
 `TypeCastException` - If no value exists for that name

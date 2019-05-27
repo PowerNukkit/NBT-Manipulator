@@ -1,8 +1,4 @@
----
-title: NbtCompound.getNullableLongArray - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtCompound](index.html) / [getNullableLongArray](./get-nullable-long-array.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtCompound](index.md) / [getNullableLongArray](./get-nullable-long-array.md)
 
 # getNullableLongArray
 

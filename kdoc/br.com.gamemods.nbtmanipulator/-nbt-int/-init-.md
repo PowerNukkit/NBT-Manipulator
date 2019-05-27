@@ -1,8 +1,4 @@
----
-title: NbtInt.<init> - 
----
-
-[br.com.gamemods.nbtmanipulator](../index.html) / [NbtInt](index.html) / [&lt;init&gt;](./-init-.html)
+[br.com.gamemods.nbtmanipulator](../index.md) / [NbtInt](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
