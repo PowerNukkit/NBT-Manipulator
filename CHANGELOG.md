@@ -24,7 +24,7 @@ Click the link above to see the future.
 - API to read and write to/from NBT files/streams using `NbtIO`
 - API to freely manipulate NBT data loaded in memory
 
-[Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.2...HEAD
 [0.0.2]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1..v0.0.2
 [0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.0..v0.0.1
 
