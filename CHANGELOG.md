@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 Click the link above to see the future.
 
+## [1.0.0] - 2019-05-27
+[Downloads from maven central.][Download 1.0.0]
+### Added
+- `deepClone` method to all tags
+- `require` method to `NbtCompound`
+
+### Changed
+- `NbtList` is now a `MutableList` and not a `data class` anymore. This completely changes how API users interacts with them.
+- `NbtCompound` is now a `MutableMap` and not a `data class` anymore. This completely changes how API users interacts with them.
+- Renamed the parameter `name` to `key` in all methods of `NbtCompound`
+- Renamed the parameter `tagName` to `tagKey` in all copy methods of `NbtCompound`
+- All get methods from `NbtCompound` will now throw `NoSuchElementException` if the requested key does not exists in the compound
+- All methods which throws exceptions now have the exception which is thrown registered in the binary files. 
+Useful for Java users and who couldn't get the sources or javadoc.
+
+
 ## [0.0.2] - 2019-05-27 
 [Downloads from maven central.][Download 0.0.2]
 ### Added
@@ -24,9 +40,11 @@ Click the link above to see the future.
 - API to read and write to/from NBT files/streams using `NbtIO`
 - API to freely manipulate NBT data loaded in memory
 
-[Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.2...HEAD
+[Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.2..v1.0.0
 [0.0.2]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1..v0.0.2
 [0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.0..v0.0.1
 
+[Download 1.0.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.0.0/
 [Download 0.0.2]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.2/
 [Download 0.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.1/

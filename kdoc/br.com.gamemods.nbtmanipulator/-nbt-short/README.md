@@ -2,7 +2,7 @@
 
 # NbtShort
 
-`data class NbtShort : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtShort : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps a short value.
 
@@ -17,3 +17,9 @@ A tag which wraps a short value.
 | Name | Summary |
 |---|---|
 | [value](value.md) | `var value: `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)<br>The wrapped value |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtShort`](./index.md)<br>Returns a new wrapper with the current value. |

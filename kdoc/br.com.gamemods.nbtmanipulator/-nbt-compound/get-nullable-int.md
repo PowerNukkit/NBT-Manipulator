@@ -2,7 +2,10 @@
 
 # getNullableInt
 
-`fun getNullableInt(name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?`
+`fun getNullableInt(key: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?`
 
 Returns the unwrapped int value or null if no value is mapped or it is mapped to an other type tag.
 
+### Exceptions
+
+`ClassCastException` - If the [NbtTag](../-nbt-tag/index.md) is not a [NbtInt](../-nbt-int/index.md)

@@ -2,7 +2,7 @@
 
 # NbtByteArray
 
-`data class NbtByteArray : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtByteArray : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps a mutable byte array.
 
@@ -22,5 +22,6 @@ A tag which wraps a mutable byte array.
 
 | Name | Summary |
 |---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtByteArray`](./index.md)<br>Returns a new wrapper with a copy of the current value. |
 | [equals](equals.md) | `fun equals(other: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Properly checks the equality of the array. |
 | [hashCode](hash-code.md) | `fun hashCode(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Properly calculates the hashcode of the array. |

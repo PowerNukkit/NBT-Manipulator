@@ -2,7 +2,7 @@
 
 # NbtByte
 
-`data class NbtByte : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtByte : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps a byte value.
 
@@ -17,3 +17,9 @@ A tag which wraps a byte value.
 | Name | Summary |
 |---|---|
 | [value](value.md) | `var value: `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)<br>The wrapped value |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtByte`](./index.md)<br>Returns a new wrapper with the current value. |

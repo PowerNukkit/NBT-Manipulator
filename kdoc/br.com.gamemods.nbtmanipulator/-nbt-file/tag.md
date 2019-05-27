@@ -2,7 +2,7 @@
 
 # tag
 
-`var tag: `[`NbtTag`](../-nbt-tag.md)
+`var tag: `[`NbtTag`](../-nbt-tag/index.md)
 
 The first tag in the file. A [NbtCompound](../-nbt-compound/index.md) in most cases.
 

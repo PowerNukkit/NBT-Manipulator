@@ -2,12 +2,12 @@
 
 # getString
 
-`fun getString(name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+`fun getString(key: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
 
 Returns the unwrapped string value.
 
 ### Exceptions
 
-`ClassCastException` - If the [NbtTag](../-nbt-tag.md) is not a [NbtString](../-nbt-string/index.md)
+`ClassCastException` - If the [NbtTag](../-nbt-tag/index.md) is not a [NbtString](../-nbt-string/index.md)
 
-`TypeCastException` - If no value exists for that name
+`NoSuchElementException` - If the key is not present on the compound

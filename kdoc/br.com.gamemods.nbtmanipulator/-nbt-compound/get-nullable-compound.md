@@ -2,10 +2,13 @@
 
 # getNullableCompound
 
-`fun getNullableCompound(name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`NbtCompound`](index.md)`?`
+`fun getNullableCompound(key: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`NbtCompound`](index.md)`?`
 
-Returns the [NbtCompound](index.md) mapped to that name. The tag will be linked and any modification will
+Returns the [NbtCompound](index.md) mapped to that key. The tag will be linked and any modification will
 also change the mapped value.
 
 Will return null if no value is mapped or it is mapped to an other type tag.
 
+### Exceptions
+
+`ClassCastException` - If the [NbtTag](../-nbt-tag/index.md) is not a [NbtCompound](index.md)

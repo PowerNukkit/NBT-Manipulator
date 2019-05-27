@@ -2,7 +2,7 @@
 
 # NbtString
 
-`data class NbtString : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtString : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps a [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) value.
 
@@ -17,3 +17,9 @@ A tag which wraps a [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin
 | Name | Summary |
 |---|---|
 | [value](value.md) | `var value: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>The wrapped value |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtString`](./index.md)<br>Returns a new wrapper with the current value. |

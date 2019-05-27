@@ -2,7 +2,7 @@
 
 # NbtLong
 
-`data class NbtLong : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtLong : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps a long value.
 
@@ -17,3 +17,9 @@ A tag which wraps a long value.
 | Name | Summary |
 |---|---|
 | [value](value.md) | `var value: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)<br>The wrapped value |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtLong`](./index.md)<br>Returns a new wrapper with the current value. |

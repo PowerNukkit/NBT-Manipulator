@@ -2,7 +2,7 @@
 
 # NbtInt
 
-`data class NbtInt : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtInt : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps an int value.
 
@@ -17,3 +17,9 @@ A tag which wraps an int value.
 | Name | Summary |
 |---|---|
 | [value](value.md) | `var value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>The wrapped value |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtInt`](./index.md)<br>Returns a new wrapper with the current value. |

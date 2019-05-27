@@ -2,7 +2,7 @@
 
 # NbtDouble
 
-`data class NbtDouble : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtDouble : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps a double value.
 
@@ -17,3 +17,9 @@ A tag which wraps a double value.
 | Name | Summary |
 |---|---|
 | [value](value.md) | `var value: `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>The wrapped value |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtDouble`](./index.md)<br>Returns a new wrapper with the current value. |

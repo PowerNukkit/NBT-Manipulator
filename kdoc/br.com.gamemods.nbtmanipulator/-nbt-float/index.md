@@ -2,7 +2,7 @@
 
 # NbtFloat
 
-`data class NbtFloat : `[`NbtTag`](../-nbt-tag.md)
+`data class NbtFloat : `[`NbtTag`](../-nbt-tag/index.md)
 
 A tag which wraps a float value.
 
@@ -17,3 +17,9 @@ A tag which wraps a float value.
 | Name | Summary |
 |---|---|
 | [value](value.md) | `var value: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)<br>The wrapped value |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [deepCopy](deep-copy.md) | `fun deepCopy(): `[`NbtFloat`](./index.md)<br>Returns a new wrapper with the current value. |
