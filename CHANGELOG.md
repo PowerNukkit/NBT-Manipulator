@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Click the link above to see the future.
 
 ## [0.0.2] - 2019-05-27 
-[Downloads from maven central.][Download 0.0.1]
+[Downloads from maven central.][Download 0.0.2]
 ### Added
 - Static methods for java users calling `NbtIO`
 - Documentation to all public types, functions and properties
