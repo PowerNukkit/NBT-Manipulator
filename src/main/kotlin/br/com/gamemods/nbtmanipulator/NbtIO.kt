@@ -9,7 +9,7 @@ import java.util.zip.GZIPOutputStream
 import kotlin.reflect.KClass
 
 /**
- * Contains usefull methods do read and write [NbtFile] from [File] and [InputStream]/[OutputStream].
+ * Contains useful methods do read and write [NbtFile] from [File] and [InputStream]/[OutputStream].
  */
 object NbtIO {
     /**

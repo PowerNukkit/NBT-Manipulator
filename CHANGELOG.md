@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Static methods for java users calling `NbtIO`
 - Documentation to all public types, functions and properties
+- The methods `NbtCompound.remove(String)`, `NbtCompound.remove(String, NbtTag)` and `NbtCompound.minusAssign(String)`
 
 ### Changed
 - JavaDoc will not generate when building on Java 9+ due to a dokka issue
