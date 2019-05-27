@@ -169,12 +169,16 @@ data class NbtString(var value: String): NbtTag() {
 /**
  * A tag which contains a [MutableList] structure of [NbtTag]s. All items in the list must have the same class.
  * Null values in the list are not allowed.
- * @param tags The tags that will be in this list initially. May be read-only.
  * The tags in the list will be linked so any modification will also change this tag contents.
  * @param T The type of the tag that will be wrapped. [NbtEnd] and [NbtTag] are not valid.
  */
 @Suppress("UNCHECKED_CAST")
-class NbtList<T: NbtTag>(tags: Collection<T>): NbtTag(), MutableList<T> by tags.toMutableList() {
+class NbtList<T: NbtTag>
+    /**
+     * Uses all tags as initial value of this list. Make sure to use the same class in all values.
+     */
+    constructor(tags: Collection<T>): NbtTag(), MutableList<T>
+by tags.toMutableList() {
     /**
      * Creates a empty list.
      */
@@ -223,9 +227,6 @@ private const val BYTE_TRUE: Byte = 1
  *
  * It's the main heart of NBT files and usually contains complex structures.
  *
- * @param value A [Map] which contains all key-value mappings.
- * The tags in the map will be linked so any modification will also change this tag contents.
- *
  * The returned tags by this class will be linked, so modifications to it will also affects the compound value.
  * 
  * All get functions which are not prefixed with `Nullable` and `get` will throw a [ClassCastException]
@@ -237,6 +238,9 @@ private const val BYTE_TRUE: Byte = 1
  *
  * All get list functions which returns lists of specific types will throw [IllegalStateException] if the list content
  * does not match the requested type.
+ *
+ * @param value A [Map] which contains all key-value mappings.
+ * The tags in the map will be linked so any modification will also change this tag contents.
  */
 class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, NbtTag> by LinkedHashMap(value) {
     /**
