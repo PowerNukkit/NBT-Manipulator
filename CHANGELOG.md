@@ -5,7 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-Click the link above to see the future.
+### Added
+- `deepClone` method to all tags
+
+### Changed
+- `NbtList` is now a `MutableList` and not a `data class` anymore. This completely changes how API users interacts with them.
+- `NbtCompound` is now a `MutableMap` and not a `data class` anymore. This completely changes how API users interacts with them.
+- Renamed the parameter `name` to `key` in all methods of `NbtCompound`
+- Renamed the parameter `tagName` to `tagKey` in all copy methods of `NbtCompound`
 
 ## [0.0.2] - 2019-05-27 
 [Downloads from maven central.][Download 0.0.2]
