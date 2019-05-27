@@ -3,6 +3,8 @@
 
 package br.com.gamemods.nbtmanipulator
 
+import java.lang.ClassCastException
+
 /**
  * The root component of a file, it contains a hint for the file name and the first tag in the file.
  * @property name The key for the file name. Empty in most cases.
@@ -12,6 +14,7 @@ package br.com.gamemods.nbtmanipulator
  */
 data class NbtFile(var name: String, var tag: NbtTag) {
     var compound: NbtCompound
+        @Throws(ClassCastException::class)
         get() = tag as NbtCompound
         set(value) {
             tag = value
@@ -225,12 +228,15 @@ private const val BYTE_TRUE: Byte = 1
  *
  * The returned tags by this class will be linked, so modifications to it will also affects the compound value.
  * 
- * All get functions which are not prefixed with `Nullable` and [NbtCompound.get] will throw a [ClassCastException]
+ * All get functions which are not prefixed with `Nullable` and `get` will throw a [ClassCastException]
  * if the tag is mapped to a different class then the method used. For example if a given compound
  * have a example=NbtInt(2) and you try to read it using [NbtCompound.getShort], an exception will be thrown.
  *
- * All get functions which are not prefixed with `Nullable` and [NbtCompound.get] will throw [TypeCastException]
+ * All get functions which are not prefixed with `Nullable` and `get` will throw [NoSuchElementException]
  * if no value is mapped to the given name. This will change in future.
+ *
+ * All get list functions which returns lists of specific types will throw [IllegalStateException] if the list content
+ * does not match the requested type.
  */
 class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, NbtTag> by LinkedHashMap(value) {
     /**
@@ -304,349 +310,431 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
     /**
      * Returns `true` if [getByte] returns `1`, `false` otherwise.
      * Will also return `false` if the value is not mapped.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtByte]
      */
+    @Throws(ClassCastException::class)
     fun getNullableBooleanByte(key: String) = getNullableByte(key) == BYTE_TRUE
     /**
      * Returns `true` if [getByte] returns `1`, `false` otherwise.
      * @throws ClassCastException If the [NbtTag] is not a [NbtByte]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class)
     fun getBooleanByte(key: String) = getByte(key) == BYTE_TRUE
 
     /**
+     * Returns the value corresponding to the given [key], or throw an exception if such a key is not present in the compound.
+     * @throws NoSuchElementException If the key is not present on the compound
+     */
+    @Throws(NoSuchElementException::class)
+    fun require(key: String) = get(key) ?: throw NoSuchElementException(key)
+    
+    /**
      * Returns the unwrapped byte value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtByte]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getByte(key: String) = (this[key] as NbtByte).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getByte(key: String) = (require(key) as NbtByte).value
     /**
      * Returns the unwrapped short value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtShort]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getShort(key: String) = (this[key] as NbtShort).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getShort(key: String) = (require(key) as NbtShort).value
     /**
      * Returns the unwrapped int value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtInt]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getInt(key: String) = (this[key] as NbtInt).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getInt(key: String) = (require(key) as NbtInt).value
     /**
      * Returns the unwrapped long value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtLongArray]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getLong(key: String) = (this[key] as NbtLong).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getLong(key: String) = (require(key) as NbtLong).value
     /**
      * Returns the unwrapped float value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtFloat]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getFloat(key: String) = (this[key] as NbtFloat).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getFloat(key: String) = (require(key) as NbtFloat).value
     /**
      * Returns the unwrapped double value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtDouble]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getDouble(key: String) = (this[key] as NbtDouble).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getDouble(key: String) = (require(key) as NbtDouble).value
     /**
      * Returns the unwrapped byte array value. The array will be linked and any modification will
      * also change wrapper and the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtByteArray]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getByteArray(key: String) = (this[key] as NbtByteArray).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getByteArray(key: String) = (require(key) as NbtByteArray).value
     /**
      * Returns the unwrapped string value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtString]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getString(key: String) = (this[key] as NbtString).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getString(key: String) = (require(key) as NbtString).value
     /**
      * Returns the unwrapped int array value. The array will be linked and any modification will
      * also change wrapper and the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtIntArray]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getIntArray(key: String) = (this[key] as NbtIntArray).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getIntArray(key: String) = (require(key) as NbtIntArray).value
     /**
      * Returns the unwrapped long array value. The array will be linked and any modification will
      * also change wrapper and the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtLongArray]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getLongArray(key: String) = (this[key] as NbtLongArray).value
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getLongArray(key: String) = (require(key) as NbtLongArray).value
     /**
      * Returns the [NbtCompound] mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtCompound]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getCompound(key: String) = this[key] as NbtCompound
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getCompound(key: String) = require(key) as NbtCompound
     /**
      * Returns the [NbtList] mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      */
-    fun getList(key: String) = this[key] as NbtList<*>
+    @Throws(ClassCastException::class, NoSuchElementException::class)
+    fun getList(key: String) = require(key) as NbtList<*>
 
     /**
      * Returns the [NbtList] of bytes mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtByte]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getByteList(key: String) = getList(key).cast<NbtByte>()
     /**
      * Returns the [NbtList] of shorts mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtShort]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getShortList(key: String) = getList(key).cast<NbtShort>()
     /**
      * Returns the [NbtList] of integers mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtIntArray]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getIntList(key: String) = getList(key).cast<NbtInt>()
     /**
      * Returns the [NbtList] of longs mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtLong]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getLongList(key: String) = getList(key).cast<NbtLong>()
     /**
      * Returns the [NbtList] of floats mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtFloat]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getFloatList(key: String) = getList(key).cast<NbtFloat>()
     /**
      * Returns the [NbtList] of doubles mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtDouble]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getDoubleList(key: String) = getList(key).cast<NbtDouble>()
     /**
      * Returns the [NbtList] of byte arrays mapped to that key. The tag and it's value will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtByteArray]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getByteArrayList(key: String) = getList(key).cast<NbtByteArray>()
     /**
      * Returns the [NbtList] of strings mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtString]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getStringList(key: String) = getList(key).cast<NbtString>()
     /**
      * Returns the [NbtList] of int arrays mapped to that key. The tag and it's value will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtIntArray]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getIntArrayList(key: String) = getList(key).cast<NbtIntArray>()
     /**
      * Returns the [NbtList] of long arrays mapped to that key. The tag and it's values will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtLongArray]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getLongArrayList(key: String) = getList(key).cast<NbtLongArray>()
     /**
      * Returns the [NbtList] of compounds mapped to that key. The tag and it's values will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtCompound]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getCompoundList(key: String) = getList(key).cast<NbtCompound>()
     /**
      * Returns the [NbtList] of lists mapped to that key. The tag and it's values will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
-     * @throws TypeCastException If no value exists for that key
+     * @throws NoSuchElementException If the key is not present on the compound
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtList]
      */
+    @Throws(ClassCastException::class, NoSuchElementException::class, IllegalStateException::class)
     fun getListOfList(key: String) = getList(key).cast<NbtList<*>>()
 
     /**
      * Returns the unwrapped byte value or null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtByte]
      */
-    fun getNullableByte(key: String) = (this[key] as? NbtByte)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableByte(key: String) = this[key]?.let { it as NbtByte }?.value
     /**
      * Returns the unwrapped short value or null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtShort]
      */
-    fun getNullableShort(key: String) = (this[key] as? NbtShort)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableShort(key: String) = this[key]?.let { it as NbtShort }?.value
     /**
      * Returns the unwrapped int value or null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtInt]
      */
-    fun getNullableInt(key: String) = (this[key] as? NbtInt)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableInt(key: String) = this[key]?.let { it as NbtInt }?.value
     /**
      * Returns the unwrapped long value or null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtLong]
      */
-    fun getNullableLong(key: String) = (this[key] as? NbtLong)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableLong(key: String) = this[key]?.let { it as NbtLong }?.value
     /**
      * Returns the unwrapped float value or null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtFloat]
      */
-    fun getNullableFloat(key: String) = (this[key] as? NbtFloat)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableFloat(key: String) = this[key]?.let { it as NbtFloat }?.value
     /**
      * Returns the unwrapped double value or null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtDouble]
      */
-    fun getNullableDouble(key: String) = (this[key] as? NbtDouble)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableDouble(key: String) = this[key]?.let { it as NbtDouble }?.value
     /**
      * Returns the unwrapped byte array value. The array will be linked and any modification will
      * also change wrapper and the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtByteArray]
      */
-    fun getNullableByteArray(key: String) = (this[key] as? NbtByteArray)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableByteArray(key: String) = this[key]?.let { it as NbtByteArray }?.value
     /**
      * Returns the unwrapped string value or null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtString]
      */
-    fun getNullableString(key: String) = (this[key] as? NbtString)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableString(key: String) = this[key]?.let { it as NbtString }?.value
     /**
      * Returns the unwrapped int array value. The array will be linked and any modification will
      * also change wrapper and the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtIntArray]
      */
-    fun getNullableIntArray(key: String) = (this[key] as? NbtIntArray)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableIntArray(key: String) = this[key]?.let { it as NbtIntArray }?.value
     /**
      * Returns the unwrapped long array value. The array will be linked and any modification will
      * also change wrapper and the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtLongArray]
      */
-    fun getNullableLongArray(key: String) = (this[key] as? NbtLongArray)?.value
+    @Throws(ClassCastException::class)
+    fun getNullableLongArray(key: String) = this[key]?.let { it as NbtLongArray }?.value
     /**
      * Returns the [NbtCompound] mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtCompound]
      */
-    fun getNullableCompound(key: String) = this[key] as? NbtCompound
+    @Throws(ClassCastException::class)
+    fun getNullableCompound(key: String) = this[key]?.let { it as NbtCompound }
     /**
      * Returns the [NbtList] mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      */
-    fun getNullableList(key: String) = this[key] as? NbtList<*>
+    @Throws(ClassCastException::class)
+    fun getNullableList(key: String) = this[key]?.let { it as NbtList<*> }
 
     /**
      * Returns the [NbtList] of bytes mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtByte]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableByteList(key: String) = getNullableList(key)?.cast<NbtByte>()
     /**
      * Returns the [NbtList] of shorts mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtShort]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableShortList(key: String) = getNullableList(key)?.cast<NbtShort>()
     /**
      * Returns the [NbtList] of integers mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtIntArray]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableIntList(key: String) = getNullableList(key)?.cast<NbtInt>()
     /**
      * Returns the [NbtList] of longs mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtLong]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableLongList(key: String) = getNullableList(key)?.cast<NbtLong>()
     /**
      * Returns the [NbtList] of floats mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtFloat]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableFloatList(key: String) = getNullableList(key)?.cast<NbtFloat>()
     /**
      * Returns the [NbtList] of doubles mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtDouble]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableDoubleList(key: String) = getNullableList(key)?.cast<NbtDouble>()
     /**
      * Returns the [NbtList] of byte arrays mapped to that key. The tag and it's value will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtByteArray]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableByteArrayList(key: String) = getNullableList(key)?.cast<NbtByteArray>()
     /**
      * Returns the [NbtList] of strings mapped to that key. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtString]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableStringList(key: String) = getNullableList(key)?.cast<NbtString>()
     /**
      * Returns the [NbtList] of int arrays mapped to that key. The tag and it's value will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtIntArray]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableIntArrayList(key: String) = getNullableList(key)?.cast<NbtIntArray>()
     /**
      * Returns the [NbtList] of long arrays mapped to that key. The tag and it's values will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtLongArray]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableLongArrayList(key: String) = getNullableList(key)?.cast<NbtLongArray>()
     /**
      * Returns the [NbtList] of compounds mapped to that key. The tag and it's values will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtCompound]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableCompoundList(key: String) = getNullableList(key)?.cast<NbtCompound>()
     /**
      * Returns the [NbtList] of lists mapped to that key. The tag and it's values will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
+     * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws IllegalStateException If the list is not empty and contains any tag with class different then [NbtList]
      */
+    @Throws(ClassCastException::class, IllegalStateException::class)
     fun getNullableListOfList(key: String) = getNullableList(key)?.cast<NbtList<*>>()
 
     /**
@@ -679,6 +767,9 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
         }
     }
 
+    /**
+     * Returns a new NbtCompound with all nested values copied deeply.
+     */
     override fun deepCopy() = NbtCompound(mapValues { it.value.deepCopy() })
 }
 
@@ -708,6 +799,9 @@ data class NbtIntArray(var value: IntArray): NbtTag() {
         return value.contentHashCode()
     }
 
+    /**
+     * Returns a new wrapper with a copy of the current value.
+     */
     override fun deepCopy() = copy(value = value.copyOf())
 }
 
@@ -737,5 +831,8 @@ data class NbtLongArray(var value: LongArray) : NbtTag() {
         return value.contentHashCode()
     }
 
+    /**
+     * Returns a new wrapper with a copy of the current value.
+     */
     override fun deepCopy() = copy(value = value.copyOf())
 }

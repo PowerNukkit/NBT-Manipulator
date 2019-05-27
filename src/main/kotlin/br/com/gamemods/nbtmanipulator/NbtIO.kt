@@ -216,17 +216,17 @@ private object NbtListSerial: NbtSerial<NbtList<*>>(NbtList::class) {
     }
 
     override fun writeTag(output: DataOutputStream, tag: NbtList<*>) {
-        val sample = tag.value.firstOrNull() ?: NbtEnd
+        val sample = tag.firstOrNull() ?: NbtEnd
         val typeId = sample.typeId
         val serializer = serializers[typeId]
 
-        if (typeId == 0 && tag.value.size > 0) {
+        if (typeId == 0 && tag.size > 0) {
             error("NbtList cannot have NbtEnd")
         }
 
         output.writeByte(typeId)
-        output.writeInt(tag.value.size)
-        tag.value.forEach {
+        output.writeInt(tag.size)
+        tag.forEach {
             serializer.writeTag(output, it)
         }
     }
@@ -250,11 +250,11 @@ private object NbtCompoundSerial: NbtSerial<NbtCompound>(NbtCompound::class) {
     }
 
     override fun writeTag(output: DataOutputStream, tag: NbtCompound) {
-        check(tag.value.values.none { it == NbtEnd }) {
+        check(tag.values.none { it == NbtEnd }) {
             "NbtCompound cannot have an NbtEnd"
         }
 
-        tag.value.forEach { (name, childTag) ->
+        tag.forEach { (name, childTag) ->
             val typeId = childTag.typeId
             val serializer = serializers[typeId]
             output.writeByte(typeId)

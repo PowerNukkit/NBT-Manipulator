@@ -7,12 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - `deepClone` method to all tags
+- `require` method to `NbtCompound`
 
 ### Changed
 - `NbtList` is now a `MutableList` and not a `data class` anymore. This completely changes how API users interacts with them.
 - `NbtCompound` is now a `MutableMap` and not a `data class` anymore. This completely changes how API users interacts with them.
 - Renamed the parameter `name` to `key` in all methods of `NbtCompound`
 - Renamed the parameter `tagName` to `tagKey` in all copy methods of `NbtCompound`
+- All get methods from `NbtCompound` will now throw `NoSuchElementException` if the requested key does not exists in the compound
+- All methods which throws exceptions now have the exception which is thrown registered in the binary files. 
+Useful for Java users and who couldn't get the sources or javadoc.
+
 
 ## [0.0.2] - 2019-05-27 
 [Downloads from maven central.][Download 0.0.2]
