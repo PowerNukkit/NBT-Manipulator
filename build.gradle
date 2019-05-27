@@ -11,7 +11,6 @@ group 'br.com.gamemods'
 version '1.1.0-SNAPSHOT'
 
 sourceSets.main.java.srcDirs = ["src/main/kotlin"]
-sourceSets.test.java.srcDirs = ["src/main/kotlin"]
 
 sourceCompatibility = 1.8
 targetCompatibility = sourceCompatibility
@@ -179,7 +178,7 @@ if (JavaVersion.current().majorVersion == "8") {
         repoUri = 'https://github.com/GameModsBR/NBT-Manipulator.git'
 
         // where to fetch from prior to fetching from the remote (i.e. a local repo to save time)
-        referenceRepoUri = file("$projectDir/gh-pages").toURI().toString()
+        //referenceRepoUri = file("$projectDir/gh-pages").toURI().toString()
 
         // branch will be created if it doesn't exist
         branch = 'gh-pages'

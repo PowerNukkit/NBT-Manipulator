@@ -8,7 +8,5 @@ class LevelDatTest {
         val compound = LevelDatTest::class.java.getResourceAsStream("/level.dat").use { inputStream ->
             NbtIO.readNbtFile(inputStream)
         }
-
-        println(compound)
     }
 }
