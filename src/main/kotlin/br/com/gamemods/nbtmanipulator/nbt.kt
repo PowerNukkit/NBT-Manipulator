@@ -133,8 +133,9 @@ data class NbtList<T: NbtTag>(var value: MutableList<T>): NbtTag() {
 }
 
 /**
- * Creates a new mutable list based on the given list and then wrappes it into a [NbtList].
+ * Creates a new mutable list based on the given list and then wrappers it into a [NbtList].
  */
+@Suppress("FunctionName")
 @JvmName("cloneListToNbtList")
 fun <T: NbtTag> NbtList(list: List<T>) = NbtList(list.toMutableList())
 
@@ -247,6 +248,24 @@ data class NbtCompound(var value: MutableMap<String, NbtTag>) : NbtTag() {
     operator fun set(name: String, value: LongArray) = set(name, NbtLongArray(value))
 
     /**
+     * Removes a mapping if it exists.
+     */
+    fun remove(name: String): NbtTag? = value.remove(name)
+
+    /**
+     * Removes a mapping if the current mapping maps to the expected value
+     */
+    fun remove(name: String, expectedValue: NbtTag) = value.remove(name, expectedValue)
+
+    /**
+     * Removes a mapping if it exists.
+     */
+    @JvmSynthetic
+    operator fun minusAssign(name: String) {
+        remove(name)
+    }
+
+    /**
      * Returns `true` if [getByte] returns `1`, `false` otherwise.
      * Will also return `false` if the value is not mapped.
      */
@@ -353,7 +372,7 @@ data class NbtCompound(var value: MutableMap<String, NbtTag>) : NbtTag() {
      */
     fun getShortList(name: String) = getList(name).cast<NbtShort>()
     /**
-     * Returns the [NbtList] of ints mapped to that name. The tag will be linked and any modification will
+     * Returns the [NbtList] of integers mapped to that name. The tag will be linked and any modification will
      * also change the mapped value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtList]
      * @throws TypeCastException If no value exists for that name
@@ -514,7 +533,7 @@ data class NbtCompound(var value: MutableMap<String, NbtTag>) : NbtTag() {
      */
     fun getNullableShortList(name: String) = getNullableList(name)?.cast<NbtShort>()
     /**
-     * Returns the [NbtList] of ints mapped to that name. The tag will be linked and any modification will
+     * Returns the [NbtList] of integers mapped to that name. The tag will be linked and any modification will
      * also change the mapped value.
      *
      * Will return null if no value is mapped or it is mapped to an other type tag.
