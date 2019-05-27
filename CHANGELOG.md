@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Click the link above to see the future.
 
 ## [1.0.1] - 2019-05-27
+[Downloads from maven central.][Download 1.0.1]
+
+[Kotlin Documentation][KDoc 1.0.1]
+
 ### Fixes
 - StackOverflowException on `NbtCompound.set(String, NbtTag)`
 
