@@ -57,5 +57,5 @@ Useful for Java users and who couldn't get the sources or javadoc.
 [Download 0.0.2]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.2/
 [Download 0.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.1/
 
-[KDoc 1.0.1]: https://github.com/GameModsBR/NBT-Manipulator/blob/0ef42323681f9960cb2c9698d7b8b1d02632691b/kdoc/br.com.gamemods.nbtmanipulator/index.md
+[KDoc 1.0.1]: https://github.com/GameModsBR/NBT-Manipulator/blob/09705214b25ab8e8d7fe64bd47cb651bf751d8f8/kdoc/br.com.gamemods.nbtmanipulator/index.md
 [KDoc 1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/0ef42323681f9960cb2c9698d7b8b1d02632691b/kdoc/br.com.gamemods.nbtmanipulator/index.md
