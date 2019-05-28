@@ -8,6 +8,17 @@ Here you can find the library documentation:
 
 You may also want to see the [changelog](CHANGELOG.md) file to be aware of all changes in the tool that may impact you.
 
+**TIP:** If you are using `NbtList` with Kotlin, add a `import br.com.gamemods.nbtmanipulator.*` for easy list management.
+
+For example:
+```kotlin
+val list = listOf(2,3,4,5,6).toNbtList()
+list += 7
+check(7 in list)
+list -= 7
+check(7 !in list)
+```
+
 ## Adding to your project
 
 The library is shared in the maven center, so you don't need to declare any custom repository.
