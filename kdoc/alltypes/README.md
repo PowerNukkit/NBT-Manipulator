@@ -4,6 +4,14 @@
 
 | Name | Summary |
 |---|---|
+| [kotlin.Array](../br.com.gamemods.nbtmanipulator/kotlin.-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
+| [kotlin.BooleanArray](../br.com.gamemods.nbtmanipulator/kotlin.-boolean-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
+| [kotlin.ByteArray](../br.com.gamemods.nbtmanipulator/kotlin.-byte-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
+| [kotlin.DoubleArray](../br.com.gamemods.nbtmanipulator/kotlin.-double-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
+| [kotlin.FloatArray](../br.com.gamemods.nbtmanipulator/kotlin.-float-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
+| [kotlin.IntArray](../br.com.gamemods.nbtmanipulator/kotlin.-int-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
+| [kotlin.collections.Iterable](../br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
+| [kotlin.LongArray](../br.com.gamemods.nbtmanipulator/kotlin.-long-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |
 | [br.com.gamemods.nbtmanipulator.NbtByte](../br.com.gamemods.nbtmanipulator/-nbt-byte/index.md) | A tag which wraps a byte value. |
 | [br.com.gamemods.nbtmanipulator.NbtByteArray](../br.com.gamemods.nbtmanipulator/-nbt-byte-array/index.md) | A tag which wraps a mutable byte array. |
 | [br.com.gamemods.nbtmanipulator.NbtCompound](../br.com.gamemods.nbtmanipulator/-nbt-compound/index.md) | A tag which contains a [MutableMap](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html) structure associating [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)s to [NbtTag](../br.com.gamemods.nbtmanipulator/-nbt-tag/index.md)s. |
@@ -20,3 +28,4 @@
 | [br.com.gamemods.nbtmanipulator.NbtShort](../br.com.gamemods.nbtmanipulator/-nbt-short/index.md) | A tag which wraps a short value. |
 | [br.com.gamemods.nbtmanipulator.NbtString](../br.com.gamemods.nbtmanipulator/-nbt-string/index.md) | A tag which wraps a [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) value. |
 | [br.com.gamemods.nbtmanipulator.NbtTag](../br.com.gamemods.nbtmanipulator/-nbt-tag/index.md) | The base class for Nbt Tags. All tag values are mutable. |
+| [kotlin.ShortArray](../br.com.gamemods.nbtmanipulator/kotlin.-short-array/index.md) (extensions in package br.com.gamemods.nbtmanipulator) |  |

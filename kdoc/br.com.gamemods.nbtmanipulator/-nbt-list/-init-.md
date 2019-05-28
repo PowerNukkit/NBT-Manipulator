@@ -9,6 +9,7 @@ Creates a empty list.
 `NbtList(vararg tags: `[`T`](index.md#T)`)`
 `NbtList(tags: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
 `NbtList(tags: `[`Sequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html)`<`[`T`](index.md#T)`>)`
+`NbtList(tags: `[`NbtList`](index.md)`<`[`T`](index.md#T)`>)`
 
 Uses all tags as initial value of this list. Make sure to use the same class in all values.
 

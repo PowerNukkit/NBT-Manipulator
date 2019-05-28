@@ -1,4 +1,67 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
-
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((br.com.gamemods.nbtmanipulator.NbtTag)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.Array((br.com.gamemods.nbtmanipulator.NbtTag)))))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.Byte)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.ByteArray)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.Double)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.Float)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.Int)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.IntArray)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.Long)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.LongArray)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.Short)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.String)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Array((kotlin.collections.Map((kotlin.String, br.com.gamemods.nbtmanipulator.NbtTag)))))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Boolean)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Byte)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.ByteArray)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Double)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Float)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Int)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.IntArray)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Long)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.LongArray)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.Short)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.String)))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((br.com.gamemods.nbtmanipulator.NbtTag)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.Byte)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.ByteArray)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.Double)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.Float)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.Int)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.IntArray)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.Long)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.LongArray)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.Short)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.String)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.collections.Iterable((br.com.gamemods.nbtmanipulator.NbtTag)))))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Iterable((kotlin.collections.Map((kotlin.String, br.com.gamemods.nbtmanipulator.NbtTag)))))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.Array((kotlin.collections.Map((kotlin.String, br.com.gamemods.nbtmanipulator.NbtTag)))))br.com.gamemods.nbtmanipulator/kotlin.-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.BooleanArray)br.com.gamemods.nbtmanipulator/kotlin.-boolean-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.ByteArray)br.com.gamemods.nbtmanipulator/kotlin.-byte-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.DoubleArray)br.com.gamemods.nbtmanipulator/kotlin.-double-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.FloatArray)br.com.gamemods.nbtmanipulator/kotlin.-float-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.IntArray)br.com.gamemods.nbtmanipulator/kotlin.-int-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.LongArray)br.com.gamemods.nbtmanipulator/kotlin.-long-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.ShortArray)br.com.gamemods.nbtmanipulator/kotlin.-short-array/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.Boolean)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.Byte)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.ByteArray)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.Double)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.Float)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.Int)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.IntArray)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.Long)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.LongArray)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.Short)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.String)))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Iterable((br.com.gamemods.nbtmanipulator.NbtTag)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Iterable((kotlin.Byte)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Iterable((kotlin.Double)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Iterable((kotlin.Float)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Iterable((kotlin.Int)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Iterable((kotlin.Long)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Iterable((kotlin.Short)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
+$dokka.location:br.com.gamemods.nbtmanipulator$toNbtList(kotlin.collections.Iterable((kotlin.collections.Map((kotlin.String, br.com.gamemods.nbtmanipulator.NbtTag)))))br.com.gamemods.nbtmanipulator/kotlin.collections.-iterable/to-nbt-list.md
 br.com.gamemods.nbtmanipulator
