@@ -12,6 +12,9 @@ Click the link above to see the future.
 - `NbtList.create` and it's sublist flavours to simplify list creations for Java users
 - `add`, `remove`, `contains`, `minusAssign` and `plusAssign` extension functions to many possible `NbtList` for easy usage by Kotlin users
 
+### Fixes
+- Exceptions when converting optimized 1.8.8 to Nukkit.
+
 ## [1.0.1] - 2019-05-27
 [Downloads from maven central.][Download 1.0.1]
 
