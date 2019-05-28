@@ -10,6 +10,7 @@ Click the link above to see the future.
 - New constructor to `NbtList` which accepts an other `NbtList` to resolve an ambiguity call in this scenario.
 - `toNbtList()` extension function to many combinations of `Iterable` and `Array` which contains valid values for `NbtList`, including list of list.
 - `NbtList.create` and it's sublist flavours to simplify list creations for Java users
+- `add` and `plusAssign` extension functions to many possible `NbtList` for easy usage by Kotlin users
 
 ## [1.0.1] - 2019-05-27
 [Downloads from maven central.][Download 1.0.1]

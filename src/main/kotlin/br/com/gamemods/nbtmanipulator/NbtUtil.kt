@@ -20,6 +20,385 @@ internal inline fun <reified Nbt: NbtTag> NbtList<*>.cast(): NbtList<Nbt> {
     return this as NbtList<Nbt>
 }
 
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtByte>.add(value: Byte) = add(NbtByte(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtShort>.add(value: Short) = add(NbtShort(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtInt>.add(value: Int) = add(NbtInt(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtLong>.add(value: Long) = add(NbtLong(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtFloat>.add(value: Float) = add(NbtFloat(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtDouble>.add(value: Double) = add(NbtDouble(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtString>.add(value: String) = add(NbtString(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtByteArray>.add(value: ByteArray) = add(NbtByteArray(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtByteArray>.add(value: Array<Byte>) = add(NbtByteArray(value.toByteArray()))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtIntArray>.add(value: IntArray) = add(NbtIntArray(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtIntArray>.add(value: Array<Int>) = add(NbtIntArray(value.toIntArray()))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtLongArray>.add(value: LongArray) = add(NbtLongArray(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtLongArray>.add(value: Array<Long>) = add(NbtLongArray(value.toLongArray()))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun NbtList<NbtCompound>.add(value: Map<String, NbtTag>) = add(NbtCompound(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun <T: NbtTag> NbtList<NbtList<T>>.add(value: Iterable<T>) = add(NbtList(value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+fun <T: NbtTag> NbtList<NbtList<T>>.add(value: Array<T>) = add(NbtList(*value))
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtByte>>.add(value: Array<Byte>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtByte>>.add(value: ByteArray) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterByte")
+fun NbtList<NbtList<NbtByte>>.add(value: Iterable<Byte>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtShort>>.add(value: Array<Short>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtShort>>.add(value: ShortArray) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterShort")
+fun NbtList<NbtList<NbtShort>>.add(value: Iterable<Short>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtInt>>.add(value: Array<Int>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtInt>>.add(value: IntArray) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterInt")
+fun NbtList<NbtList<NbtInt>>.add(value: Iterable<Int>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtLong>>.add(value: Array<Long>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtLong>>.add(value: LongArray) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterLong")
+fun NbtList<NbtList<NbtLong>>.add(value: Iterable<Long>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtFloat>>.add(value: Array<Float>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtFloat>>.add(value: FloatArray) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterFloat")
+fun NbtList<NbtList<NbtFloat>>.add(value: Iterable<Float>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtString>>.add(value: Array<String>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterString")
+fun NbtList<NbtList<NbtString>>.add(value: Iterable<String>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtByteArray>>.add(value: Array<ByteArray>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterByteArray")
+fun NbtList<NbtList<NbtByteArray>>.add(value: Iterable<ByteArray>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtIntArray>>.add(value: Array<IntArray>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterIntArray")
+fun NbtList<NbtList<NbtIntArray>>.add(value: Iterable<IntArray>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtLongArray>>.add(value: Array<LongArray>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterLongArray")
+fun NbtList<NbtList<NbtLongArray>>.add(value: Iterable<LongArray>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfList")
+fun NbtList<NbtList<NbtCompound>>.add(value: Array<Map<String, NbtTag>>) = add(value.toNbtList())
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("addListOfListIterCompound")
+fun NbtList<NbtList<NbtCompound>>.add(value: Iterable<Map<String, NbtTag>>) = add(value.toNbtList())
+
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtByte>.plusAssign(value: Byte) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtShort>.plusAssign(value: Short) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtInt>.plusAssign(value: Int) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtLong>.plusAssign(value: Long) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtFloat>.plusAssign(value: Float) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtDouble>.plusAssign(value: Double) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtString>.plusAssign(value: String) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtByteArray>.plusAssign(value: ByteArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtByteArray>.plusAssign(value: Array<Byte>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtIntArray>.plusAssign(value: IntArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtIntArray>.plusAssign(value: Array<Int>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtLongArray>.plusAssign(value: LongArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtLongArray>.plusAssign(value: Array<Long>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun NbtList<NbtCompound>.plusAssign(value: Map<String, NbtTag>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun <T: NbtTag> NbtList<NbtList<T>>.plusAssign(value: Iterable<T>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmSynthetic operator fun <T: NbtTag> NbtList<NbtList<T>>.plusAssign(value: Array<T>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtByte>>.plusAssign(value: Array<Byte>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtByte>>.plusAssign(value: ByteArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterByte")
+@JvmSynthetic operator fun NbtList<NbtList<NbtByte>>.plusAssign(value: Iterable<Byte>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtShort>>.plusAssign(value: Array<Short>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtShort>>.plusAssign(value: ShortArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterShort")
+@JvmSynthetic operator fun NbtList<NbtList<NbtShort>>.plusAssign(value: Iterable<Short>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtInt>>.plusAssign(value: Array<Int>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtInt>>.plusAssign(value: IntArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterInt")
+@JvmSynthetic operator fun NbtList<NbtList<NbtInt>>.plusAssign(value: Iterable<Int>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtLong>>.plusAssign(value: Array<Long>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtLong>>.plusAssign(value: LongArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterLong")
+@JvmSynthetic operator fun NbtList<NbtList<NbtLong>>.plusAssign(value: Iterable<Long>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtFloat>>.plusAssign(value: Array<Float>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtFloat>>.plusAssign(value: FloatArray) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterFloat")
+@JvmSynthetic operator fun NbtList<NbtList<NbtFloat>>.plusAssign(value: Iterable<Float>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtString>>.plusAssign(value: Array<String>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterString")
+@JvmSynthetic operator fun NbtList<NbtList<NbtString>>.plusAssign(value: Iterable<String>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtByteArray>>.plusAssign(value: Array<ByteArray>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterByteArray")
+@JvmSynthetic operator fun NbtList<NbtList<NbtByteArray>>.plusAssign(value: Iterable<ByteArray>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtIntArray>>.plusAssign(value: Array<IntArray>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterIntArray")
+@JvmSynthetic operator fun NbtList<NbtList<NbtIntArray>>.plusAssign(value: Iterable<IntArray>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtLongArray>>.plusAssign(value: Array<LongArray>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterLongArray")
+@JvmSynthetic operator fun NbtList<NbtList<NbtLongArray>>.plusAssign(value: Iterable<LongArray>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfList")
+@JvmSynthetic operator fun NbtList<NbtList<NbtCompound>>.plusAssign(value: Array<Map<String, NbtTag>>) { add(value) }
+/**
+ * Adds a value with the appropriated [NbtTag] wrapper.
+ */
+@JvmName("plusAssignListOfListIterCompound")
+@JvmSynthetic operator fun NbtList<NbtList<NbtCompound>>.plusAssign(value: Iterable<Map<String, NbtTag>>) { add(value) }
 
 /**
  * Returns a [NbtList] contained all elements wrapped in the appropriated [NbtTag].
