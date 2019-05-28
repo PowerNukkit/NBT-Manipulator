@@ -401,571 +401,571 @@ operator fun NbtList<NbtList<NbtCompound>>.plusAssign(value: Array<Map<String, N
 operator fun NbtList<NbtList<NbtCompound>>.plusAssign(value: Iterable<Map<String, NbtTag>>) { add(value) }
 
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtByte>.remove(value: Byte) = remove(NbtByte(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtShort>.remove(value: Short) = remove(NbtShort(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtInt>.remove(value: Int) = remove(NbtInt(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtLong>.remove(value: Long) = remove(NbtLong(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtFloat>.remove(value: Float) = remove(NbtFloat(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtDouble>.remove(value: Double) = remove(NbtDouble(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtString>.remove(value: String) = remove(NbtString(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtByteArray>.remove(value: ByteArray) = remove(NbtByteArray(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtByteArray>.remove(value: Array<Byte>) = remove(NbtByteArray(value.toByteArray()))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtIntArray>.remove(value: IntArray) = remove(NbtIntArray(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtIntArray>.remove(value: Array<Int>) = remove(NbtIntArray(value.toIntArray()))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtLongArray>.remove(value: LongArray) = remove(NbtLongArray(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtLongArray>.remove(value: Array<Long>) = remove(NbtLongArray(value.toLongArray()))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun NbtList<NbtCompound>.remove(value: Map<String, NbtTag>) = remove(NbtCompound(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun <T: NbtTag> NbtList<NbtList<T>>.remove(value: Iterable<T>) = remove(NbtList(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 fun <T: NbtTag> NbtList<NbtList<T>>.remove(value: Array<T>) = remove(NbtList(*value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtByte>>.remove(value: Array<Byte>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtByte>>.remove(value: ByteArray) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterByte")
 fun NbtList<NbtList<NbtByte>>.remove(value: Iterable<Byte>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtShort>>.remove(value: Array<Short>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtShort>>.remove(value: ShortArray) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterShort")
 fun NbtList<NbtList<NbtShort>>.remove(value: Iterable<Short>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtInt>>.remove(value: Array<Int>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtInt>>.remove(value: IntArray) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterInt")
 fun NbtList<NbtList<NbtInt>>.remove(value: Iterable<Int>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtLong>>.remove(value: Array<Long>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtLong>>.remove(value: LongArray) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterLong")
 fun NbtList<NbtList<NbtLong>>.remove(value: Iterable<Long>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtFloat>>.remove(value: Array<Float>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtFloat>>.remove(value: FloatArray) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterFloat")
 fun NbtList<NbtList<NbtFloat>>.remove(value: Iterable<Float>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtString>>.remove(value: Array<String>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterString")
 fun NbtList<NbtList<NbtString>>.remove(value: Iterable<String>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtByteArray>>.remove(value: Array<ByteArray>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterByteArray")
 fun NbtList<NbtList<NbtByteArray>>.remove(value: Iterable<ByteArray>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtIntArray>>.remove(value: Array<IntArray>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterIntArray")
 fun NbtList<NbtList<NbtIntArray>>.remove(value: Iterable<IntArray>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtLongArray>>.remove(value: Array<LongArray>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterLongArray")
 fun NbtList<NbtList<NbtLongArray>>.remove(value: Iterable<LongArray>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfList")
 fun NbtList<NbtList<NbtCompound>>.remove(value: Array<Map<String, NbtTag>>) = remove(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("removeListOfListIterCompound")
 fun NbtList<NbtList<NbtCompound>>.remove(value: Iterable<Map<String, NbtTag>>) = add(value.toNbtList())
 
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtByte>.minusAssign(value: Byte) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtShort>.minusAssign(value: Short) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtInt>.minusAssign(value: Int) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtLong>.minusAssign(value: Long) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtFloat>.minusAssign(value: Float) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtDouble>.minusAssign(value: Double) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtString>.minusAssign(value: String) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtByteArray>.minusAssign(value: ByteArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtByteArray>.minusAssign(value: Array<Byte>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtIntArray>.minusAssign(value: IntArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtIntArray>.minusAssign(value: Array<Int>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtLongArray>.minusAssign(value: LongArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtLongArray>.minusAssign(value: Array<Long>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun NbtList<NbtCompound>.minusAssign(value: Map<String, NbtTag>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun <T: NbtTag> NbtList<NbtList<T>>.minusAssign(value: Iterable<T>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 operator fun <T: NbtTag> NbtList<NbtList<T>>.minusAssign(value: Array<T>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtByte>>.minusAssign(value: Array<Byte>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtByte>>.minusAssign(value: ByteArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterByte")
 operator fun NbtList<NbtList<NbtByte>>.minusAssign(value: Iterable<Byte>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtShort>>.minusAssign(value: Array<Short>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtShort>>.minusAssign(value: ShortArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterShort")
 operator fun NbtList<NbtList<NbtShort>>.minusAssign(value: Iterable<Short>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtInt>>.minusAssign(value: Array<Int>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtInt>>.minusAssign(value: IntArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterInt")
 operator fun NbtList<NbtList<NbtInt>>.minusAssign(value: Iterable<Int>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtLong>>.minusAssign(value: Array<Long>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtLong>>.minusAssign(value: LongArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterLong")
 operator fun NbtList<NbtList<NbtLong>>.minusAssign(value: Iterable<Long>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtFloat>>.minusAssign(value: Array<Float>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtFloat>>.minusAssign(value: FloatArray) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterFloat")
 operator fun NbtList<NbtList<NbtFloat>>.minusAssign(value: Iterable<Float>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtString>>.minusAssign(value: Array<String>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterString")
 operator fun NbtList<NbtList<NbtString>>.minusAssign(value: Iterable<String>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtByteArray>>.minusAssign(value: Array<ByteArray>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterByteArray")
 operator fun NbtList<NbtList<NbtByteArray>>.minusAssign(value: Iterable<ByteArray>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtIntArray>>.minusAssign(value: Array<IntArray>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterIntArray")
 operator fun NbtList<NbtList<NbtIntArray>>.minusAssign(value: Iterable<IntArray>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtLongArray>>.minusAssign(value: Array<LongArray>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterLongArray")
 operator fun NbtList<NbtList<NbtLongArray>>.minusAssign(value: Iterable<LongArray>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfList")
 operator fun NbtList<NbtList<NbtCompound>>.minusAssign(value: Array<Map<String, NbtTag>>) { remove(value) }
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Removes a tag containing the given value.
  */
 @JvmName("minusAssignListOfListIterCompound")
 operator fun NbtList<NbtList<NbtCompound>>.minusAssign(value: Iterable<Map<String, NbtTag>>) { remove(value) }
 
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtByte>.contains(value: Byte) = contains(NbtByte(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtShort>.contains(value: Short) = contains(NbtShort(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtInt>.contains(value: Int) = contains(NbtInt(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtLong>.contains(value: Long) = contains(NbtLong(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtFloat>.contains(value: Float) = contains(NbtFloat(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtDouble>.contains(value: Double) = contains(NbtDouble(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtString>.contains(value: String) = contains(NbtString(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtByteArray>.contains(value: ByteArray) = contains(NbtByteArray(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtByteArray>.contains(value: Array<Byte>) = contains(NbtByteArray(value.toByteArray()))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtIntArray>.contains(value: IntArray) = contains(NbtIntArray(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtIntArray>.contains(value: Array<Int>) = contains(NbtIntArray(value.toIntArray()))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtLongArray>.contains(value: LongArray) = contains(NbtLongArray(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtLongArray>.contains(value: Array<Long>) = contains(NbtLongArray(value.toLongArray()))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun NbtList<NbtCompound>.contains(value: Map<String, NbtTag>) = contains(NbtCompound(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun <T: NbtTag> NbtList<NbtList<T>>.contains(value: Iterable<T>) = contains(NbtList(value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 operator fun <T: NbtTag> NbtList<NbtList<T>>.contains(value: Array<T>) = contains(NbtList(*value))
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtByte>>.contains(value: Array<Byte>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtByte>>.contains(value: ByteArray) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterByte")
 operator fun NbtList<NbtList<NbtByte>>.contains(value: Iterable<Byte>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtShort>>.contains(value: Array<Short>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtShort>>.contains(value: ShortArray) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterShort")
 operator fun NbtList<NbtList<NbtShort>>.contains(value: Iterable<Short>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtInt>>.contains(value: Array<Int>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtInt>>.contains(value: IntArray) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterInt")
 operator fun NbtList<NbtList<NbtInt>>.contains(value: Iterable<Int>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtLong>>.contains(value: Array<Long>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtLong>>.contains(value: LongArray) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterLong")
 operator fun NbtList<NbtList<NbtLong>>.contains(value: Iterable<Long>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtFloat>>.contains(value: Array<Float>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtFloat>>.contains(value: FloatArray) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterFloat")
 operator fun NbtList<NbtList<NbtFloat>>.contains(value: Iterable<Float>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtString>>.contains(value: Array<String>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterString")
 operator fun NbtList<NbtList<NbtString>>.contains(value: Iterable<String>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtByteArray>>.contains(value: Array<ByteArray>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterByteArray")
 operator fun NbtList<NbtList<NbtByteArray>>.contains(value: Iterable<ByteArray>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtIntArray>>.contains(value: Array<IntArray>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterIntArray")
 operator fun NbtList<NbtList<NbtIntArray>>.contains(value: Iterable<IntArray>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtLongArray>>.contains(value: Array<LongArray>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterLongArray")
 operator fun NbtList<NbtList<NbtLongArray>>.contains(value: Iterable<LongArray>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfList")
 operator fun NbtList<NbtList<NbtCompound>>.contains(value: Array<Map<String, NbtTag>>) = contains(value.toNbtList())
 /**
- * Adds a value with the appropriated [NbtTag] wrapper.
+ * Checks if the list contains a [NbtTag] with the given value.
  */
 @JvmName("containsListOfListIterCompound")
 operator fun NbtList<NbtList<NbtCompound>>.contains(value: Iterable<Map<String, NbtTag>>) = add(value.toNbtList())
