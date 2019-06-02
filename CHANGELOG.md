@@ -8,9 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Click the link above to see the future.
 
 ## [1.1.0] - 2019-06-02
-[Downloads from maven central.][Download 1.0.1]
+[Downloads from maven central.][Download 1.1.0]
 
-[Kotlin Documentation][KDoc 1.0.1]
+[Kotlin Documentation][KDoc 1.1.0]
 
 ### Added
 - New constructor to `NbtList` which accepts an other `NbtList` to resolve an ambiguity call in this scenario.
@@ -68,7 +68,7 @@ Useful for Java users and who couldn't get the sources or javadoc.
 [0.0.2]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1..v0.0.2
 [0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.0..v0.0.1
 
-[Download 1.1.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.1.0/
+[Download 1.1.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.1.0/
 [Download 1.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.0.1/
 [Download 1.0.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.0.0/
 [Download 0.0.2]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.2/
