@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-    compile 'br.com.gamemods:nbt-manipulator:1.0.1'
+    compile 'br.com.gamemods:nbt-manipulator:2.0.0'
 }
 ```
 
@@ -42,7 +42,7 @@ dependencies {
     <dependency>
       <groupId>br.com.gamemods</groupId>
       <artifactId>nbt-manipulator</artifactId>
-      <version>1.0.1</version>
+      <version>2.0.0</version>
     </dependency>
 </dependencies>
 ```
@@ -50,7 +50,7 @@ dependencies {
 ### Ivy
 
 ```xml
-<dependency org="br.com.gamemods" name="nbt-manipulator" rev="1.0.1"/>
+<dependency org="br.com.gamemods" name="nbt-manipulator" rev="2.0.0"/>
 ```
 
 ### Direct JAR

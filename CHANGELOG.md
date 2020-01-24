@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 Click the link above to see the future.
 
+### Changed
+- Upgraded to Kotlin 1.3.61
+- `NbtIO.writeNbtFile` and `NbtIO.readNbtFile` now throws `IOException` in Java **(Breaking Change)** 
+
 ## [1.1.0] - 2019-06-02
 [Downloads from maven central.][Download 1.1.0]
 
