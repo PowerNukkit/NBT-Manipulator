@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 Click the link above to see the future.
 
+## [2.0.0] - 2020-01-24
+[Downloads from maven central.][Download 2.0.0]
+
+[Kotlin Documentation][KDoc 2.0.0]
+
 ### Changed
 - Upgraded to Kotlin 1.3.61
 - `NbtIO.writeNbtFile` and `NbtIO.readNbtFile` now throws `IOException` in Java **(Breaking Change)** 
@@ -65,19 +70,22 @@ Useful for Java users and who couldn't get the sources or javadoc.
 - API to read and write to/from NBT files/streams using `NbtIO`
 - API to freely manipulate NBT data loaded in memory
 
-[Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.1.1..v2.0.0
 [1.1.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.1..v1.1.0
 [1.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.0..v1.0.1
 [1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.2..v1.0.0
 [0.0.2]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1..v0.0.2
 [0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.0..v0.0.1
 
+[Download 2.0.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/2.0.0/
 [Download 1.1.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.1.0/
 [Download 1.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.0.1/
 [Download 1.0.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.0.0/
 [Download 0.0.2]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.2/
 [Download 0.0.1]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/0.0.1/
 
+[KDoc 2.0.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/144c1aec6b9fbb2ce7996e200a9637f9b868c8d9/kdoc/br.com.gamemods.nbtmanipulator/index.md
 [KDoc 1.1.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/f188707e1d9a5616db1ccd45e892171349ee5a62/kdoc/br.com.gamemods.nbtmanipulator/index.md
 [KDoc 1.0.1]: https://github.com/GameModsBR/NBT-Manipulator/blob/51f0f36511b8d4979d5d3e322f2fb766095a174c/kdoc/br.com.gamemods.nbtmanipulator/index.md
 [KDoc 1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/0ef42323681f9960cb2c9698d7b8b1d02632691b/kdoc/br.com.gamemods.nbtmanipulator/index.md
