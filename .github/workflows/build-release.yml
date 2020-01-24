@@ -1,11 +1,11 @@
-name: Java CI
+name: Release
 
 on:
   push:
     branches: 
-      - 'master'
+      - master
     tags: 
-      - 'v*'
+      - v*
 
 jobs:
   build:
