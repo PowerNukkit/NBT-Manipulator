@@ -1,10 +1,10 @@
-name: Java CI
+name: Build Snapshot
 
 on:
   pull_request:
   push:
     tags-ignore: 
-      - 'v*'
+      - v*
 
 jobs:
   build:
