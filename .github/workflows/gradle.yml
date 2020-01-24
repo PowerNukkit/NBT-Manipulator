@@ -1,0 +1,31 @@
+name: Java CI
+
+on: [pull_request, push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/cache@v1
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build with Gradle
+      run: ./gradlew build -PbinariesOnly
+    - name: Rename artifacts
+      run: mv build/libs/nbt-manipulator-*.jar target/nbt-manipulator.jar
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v1
+      if: success()
+      with:
+        name: NBT-Manipulator
+        path: build/libs/nbt-manipulator.jar
