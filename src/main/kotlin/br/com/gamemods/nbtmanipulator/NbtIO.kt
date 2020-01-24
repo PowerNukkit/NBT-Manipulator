@@ -19,6 +19,7 @@ object NbtIO {
      * @param compressed If the file will be compressed by [GZIPOutputStream].
      */
     @JvmStatic
+    @Throws(IOException::class)
     fun writeNbtFile(outputStream: OutputStream, file: NbtFile, compressed: Boolean = true) {
         val tag = file.tag
         val typeId = tag.typeId
@@ -43,6 +44,7 @@ object NbtIO {
      * @param compressed If the file will be compressed by [GZIPOutputStream]
      */
     @JvmStatic
+    @Throws(IOException::class)
     fun writeNbtFile(file: File, tag: NbtFile, compressed: Boolean = true) {
         file.outputStream().buffered().use { writeNbtFile(it, tag, compressed); it.flush() }
     }
@@ -53,6 +55,7 @@ object NbtIO {
      * @param compressed If the file needs to be decompressed by [GZIPInputStream]
      */
     @JvmStatic
+    @Throws(IOException::class)
     fun readNbtFile(inputStream: InputStream, compressed: Boolean = true): NbtFile {
         val input = if (compressed) GZIPInputStream(inputStream) else inputStream
         val dataIn = DataInputStream(input)
@@ -71,6 +74,7 @@ object NbtIO {
      * @param compressed If the file needs to be decompressed by [GZIPInputStream]
      */
     @JvmStatic
+    @Throws(IOException::class)
     fun readNbtFile(file: File, compressed: Boolean = true): NbtFile {
         return file.inputStream().buffered().use { readNbtFile(it, compressed) }
     }
