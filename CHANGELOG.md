@@ -71,12 +71,12 @@ Useful for Java users and who couldn't get the sources or javadoc.
 - API to freely manipulate NBT data loaded in memory
 
 [Unreleased]: https://github.com/GameModsBR/NBT-Manipulator/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.1.1..v2.0.0
-[1.1.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.1..v1.1.0
-[1.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.0..v1.0.1
-[1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.2..v1.0.0
-[0.0.2]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1..v0.0.2
-[0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.0..v0.0.1
+[2.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.1.1...v2.0.0
+[1.1.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.2...v1.0.0
+[0.0.2]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.1...v0.0.2
+[0.0.1]: https://github.com/GameModsBR/NBT-Manipulator/compare/v0.0.0...v0.0.1
 
 [Download 2.0.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/2.0.0/
 [Download 1.1.0]: http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/1.1.0/
