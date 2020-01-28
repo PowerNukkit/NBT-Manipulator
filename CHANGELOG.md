@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 Click the link above to see the future.
 
+### Fixed
+- Made a micro-optimization to the `NbtCompound` constructor.
+
+### Added
+- A constructor which accepts `Iterable` to `NbtCompound`
+
 ## [2.0.0] - 2020-01-24
 [Downloads from maven central.][Download 2.0.0]
 

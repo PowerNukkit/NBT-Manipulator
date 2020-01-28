@@ -364,14 +364,21 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
     /**
      * Creates an empty compound.
      */
-    constructor(): this(mutableMapOf())
+    constructor(): this(emptyMap())
 
     /**
      * Creates a compound which maps the [Pair.first] value to the [Pair.second] tag initially.
      *
      * The given tags will be linked, so modifications to them will also affects the compound value.
      */
-    constructor(vararg tags: Pair<String, NbtTag>): this(mutableMapOf(*tags))
+    constructor(vararg tags: Pair<String, NbtTag>): this(mapOf(*tags))
+
+    /**
+     * Creates a compound which maps the [Pair.first] value to the [Pair.second] tag initially.
+     *
+     * The given tags will be linked, so modifications to them will also affects the compound value.
+     */
+    constructor(tags: Iterable<Pair<String, NbtTag>>): this(tags.toMap())
 
     /**
      * Directly maps a [NbtTag] to a key. The value must not be [NbtEnd].
