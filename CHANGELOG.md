@@ -11,7 +11,22 @@ Click the link above to see the future.
 - Made a micro-optimization to the `NbtCompound` constructor.
 
 ### Added
+- Empty constructor for the array tag types. It may break old method references like `::NbtByteArray` **(Breaking Change)**
 - A constructor which accepts `Iterable` to `NbtCompound`
+- Constructors which accepts `String` to all `NbtTag` types
+- `stringValue` property to `NbtTag`
+- `unsiged` property to `NbtByte` 
+- A static function `NbtByte.unsigned(String)` to a create `NbtByte` from unsigned strings.
+
+### Changed
+- `NbtByte`'s `Int` constructor now throws `NumberFormatException` if the number is outside the `0..255` range. **(Breaking Change)** 
+- Improved the `toString()` methods of all `NbtTag` types **(Breaking Change)**
+- `NbtList` now enforces the contents to have the same type on modifications **(Breaking Change)**
+- `NbtCompound` now implements `equals` and `hashCode` as described by the `Map` interface **(Breaking Change)**
+- `NbtList` now implements `equals` and `hashCode` as described by the `List` interface **(Breaking Change)**
+- Renamed `NbtByte.value` to `NbtByte.signed`. `NbtByte.value` is still usable but it is deprecated, 
+  is being replaced in byte-code and will be removed in a future version.
+- `NbtList` and the returned sub-lists now implements `RandomAccess` 
 
 ## [2.0.0] - 2020-01-24
 [Downloads from maven central.][Download 2.0.0]

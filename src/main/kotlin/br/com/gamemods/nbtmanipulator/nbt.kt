@@ -2,8 +2,6 @@
 
 package br.com.gamemods.nbtmanipulator
 
-import java.lang.ClassCastException
-
 /**
  * The root component of a file, it contains a hint for the file name and the first tag in the file.
  * @property name The key for the file name. Empty in most cases.
@@ -27,9 +25,42 @@ data class NbtFile(var name: String, var tag: NbtTag) {
  */
 sealed class NbtTag {
     /**
+     * Returns a string representation of the tag's value.
+     *
+     * The [NbtList] and the array types will have an output similar to a normal [List] and [NbtCompound] to a normal [Map].
+     *
+     * The class names of the [NbtList]'s and [NbtCompound]'s children will exposed.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     *
+     * Be aware that this may be a slow operation on big lists, arrays or compounds.
+     */
+    abstract val stringValue: String
+
+    /**
      * Copies all this and all nested NbtTags into new objects.
      */
     abstract fun deepCopy(): NbtTag
+
+    /**
+     * A technical string representation of this tag, containing the tag type and it's value,
+     * appropriated for developer inspections.
+     *
+     * The [NbtList] and the array types will have an output similar to a normal [List] and [NbtCompound] to a normal [Map].
+     *
+     * Be aware that this may be a slow operation on big lists, arrays or compounds.
+     */
+    protected open fun toTechnicalString() = "${this::class.java.simpleName}($stringValue)"
+
+    /**
+     * A technical string representation of this tag, containing the tag type and it's value,
+     * appropriated for developer inspections.
+     *
+     * The [NbtList] and the array types will have an output similar to a normal [List] and [NbtCompound] to a normal [Map].
+     *
+     * Be aware that this may be a slow operation on big lists, arrays or compounds.
+     */
+    final override fun toString() = toTechnicalString()
 }
 
 /**
@@ -39,6 +70,19 @@ sealed class NbtTag {
  */
 object NbtEnd : NbtTag() {
     /**
+     * Returns an empty string.
+     */
+    override val stringValue: String
+        get() = ""
+
+    /**
+     * Returns `"NbtEnd"`.
+     */
+    override fun toTechnicalString(): String {
+        return "NbtEnd"
+    }
+
+    /**
      * Returns itself.
      */
     override fun deepCopy() = NbtEnd
@@ -46,9 +90,39 @@ object NbtEnd : NbtTag() {
 
 /**
  * A tag which wraps a byte value.
- * @property value The wrapped value
+ * @property signed A signed byte from `-128` to `127`
  */
-data class NbtByte(var value: Byte) : NbtTag() {
+data class NbtByte(var signed: Byte) : NbtTag() {
+    /**
+     * Read or write the [signed] as a signed byte from `0` to `255`.
+     */
+    var unsigned: Int
+        get() = signed.toInt() and 0xFF
+        set(value) {
+            this.signed = (value and 0xFF).toByte()
+        }
+
+    /**
+     * A signed byte from `-128` to `127`.
+     */
+    @Deprecated(
+        "Deprecated in favor of signed and unsigned flavours. Replace with the signed property.",
+        ReplaceWith("signed")
+    )
+    inline var value: Byte
+        get() = signed
+        set(value) {
+            signed = value
+        }
+
+    /**
+     * Returns a string representation of the tag's signed value.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     */
+    override val stringValue: String
+        get() = signed.toString()
+
     /**
      * Wraps a byte `1` if the value is `true` and `0` otherwise.
      * @param value The value to be checked
@@ -58,13 +132,45 @@ data class NbtByte(var value: Byte) : NbtTag() {
     /**
      * Converts the int value to an unsigned byte and wraps it.
      * @param unsigned Unsigned value from `0` to `255`.
+     * @throws NumberFormatException if the number is not within the 0..255 range
      */
-    constructor(unsigned: Int): this((unsigned and 0xFF).toByte())
+    @Throws(NumberFormatException::class)
+    constructor(unsigned: Int): this(unsigned.let {
+        if(it < 0 || it > 255) {
+            throw NumberFormatException("Expected an unsigned byte of range 0 to 255. Got $it.")
+        }
+        it.toByte()
+    })
+
+    /**
+     * Parses the string value as a signed byte and wraps it.
+     * @param signed Signed value from `-128` to `127`.
+     * @throws NumberFormatException if the number is not within a valid range or if the string does not contains a valid number.
+     */
+    @Throws(NumberFormatException::class)
+    constructor(signed: String): this(signed.toByte())
 
     /**
      * Returns a new wrapper with the current value.
      */
     override fun deepCopy() = copy()
+
+    /**
+     * A technical string representation of this tag, containing the tag type and it's [signed] value,
+     * appropriated for developer inspections.
+     */
+    override fun toTechnicalString(): String {
+        return "NbtByte($signed)"
+    }
+
+    companion object {
+        /**
+         * Parses the string value as an unsigned byte and wraps it.
+         * @param unsigned Unsigned value from `0` to `255`.
+         * @throws NumberFormatException if the number is not within a valid range or if the string does not contains a valid number.
+         */
+        @JvmStatic fun unsigned(unsigned: String) = NbtByte(unsigned = unsigned.toInt())
+    }
 }
 
 /**
@@ -72,6 +178,22 @@ data class NbtByte(var value: Byte) : NbtTag() {
  * @property value The wrapped value
  */
 data class NbtShort(var value: Short) : NbtTag() {
+    /**
+     * Returns a string representation of the tag's value.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     */
+    override val stringValue: String
+        get() = value.toString()
+
+    /**
+     * Parses the string value as a signed short and wraps it.
+     * @param signed Signed value from `-32768` to `32767`.
+     * @throws NumberFormatException if the number is not within a valid range or if the string does not contains a valid number.
+     */
+    @Throws(NumberFormatException::class)
+    constructor(signed: String): this(signed.toShort())
+
     /**
      * Returns a new wrapper with the current value.
      */
@@ -84,6 +206,22 @@ data class NbtShort(var value: Short) : NbtTag() {
  */
 data class NbtInt(var value: Int) : NbtTag() {
     /**
+     * Returns a string representation of the tag's value.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     */
+    override val stringValue: String
+        get() = value.toString()
+
+    /**
+     * Parses the string value as a signed int and wraps it.
+     * @param signed Signed value from `-2147483648` to `2147483647`.
+     * @throws NumberFormatException if the number is not within a valid range or if the string does not contains a valid number.
+     */
+    @Throws(NumberFormatException::class)
+    constructor(signed: String): this(signed.toInt())
+
+    /**
      * Returns a new wrapper with the current value.
      */
     override fun deepCopy() = copy()
@@ -94,6 +232,22 @@ data class NbtInt(var value: Int) : NbtTag() {
  * @property value The wrapped value
  */
 data class NbtLong(var value: Long) : NbtTag() {
+    /**
+     * Returns a string representation of the tag's value.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     */
+    override val stringValue: String
+        get() = value.toString()
+
+    /**
+     * Parses the string value as a signed long and wraps it.
+     * @param signed Signed value from `-9223372036854775808` to `9223372036854775807`.
+     * @throws NumberFormatException if the number is not within a valid range or if the string does not contains a valid number.
+     */
+    @Throws(NumberFormatException::class)
+    constructor(signed: String): this(signed.toLong())
+
     /**
      * Returns a new wrapper with the current value.
      */
@@ -106,6 +260,22 @@ data class NbtLong(var value: Long) : NbtTag() {
  */
 data class NbtFloat(var value: Float) : NbtTag() {
     /**
+     * Returns a string representation of the tag's value.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     */
+    override val stringValue: String
+        get() = value.toString()
+
+    /**
+     * Parses the string value as a signed float and wraps it.
+     * @param signed Signed value from `1.4e-45` to `3.4028235e+38`. NaN and Infinity are also accepted.
+     * @throws NumberFormatException if the number is not within a valid range or if the string does not contains a valid number.
+     */
+    @Throws(NumberFormatException::class)
+    constructor(signed: String): this(signed.toFloat())
+
+    /**
      * Returns a new wrapper with the current value.
      */
     override fun deepCopy() = copy()
@@ -117,6 +287,22 @@ data class NbtFloat(var value: Float) : NbtTag() {
  */
 data class NbtDouble(var value: Double) : NbtTag() {
     /**
+     * Returns a string representation of the tag's value.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     */
+    override val stringValue: String
+        get() = value.toString()
+
+    /**
+     * Parses the string value as a signed double and wraps it.
+     * @param signed Signed value from `4.9e-324` to `1.7976931348623157e+308`. NaN and Infinity are also accepted.
+     * @throws NumberFormatException if the number is not within a valid range or if the string does not contains a valid number.
+     */
+    @Throws(NumberFormatException::class)
+    constructor(signed: String): this(signed.toDouble())
+
+    /**
      * Returns a new wrapper with the current value.
      */
     override fun deepCopy() = copy()
@@ -127,6 +313,46 @@ data class NbtDouble(var value: Double) : NbtTag() {
  * @property value The wrapped value
  */
 data class NbtByteArray(var value: ByteArray): NbtTag() {
+    /**
+     * Returns a string representation of the tag's value with a structure similar to a normal [List].
+     *
+     * The returned string is compatible with string constructors of the same type.
+     *
+     * Like [NbtByte], the bytes returned are signed, ranging from `-128` to `127`.
+     *
+     * Be aware that this may be a slow operation on big arrays.
+     */
+    override val stringValue: String
+        get() = value.takeIf { it.isNotEmpty() }?.joinToString(prefix = "[", postfix = "]") ?: "[]"
+
+    /**
+     * Creates a new tag with an empty array.
+     */
+    constructor(): this(byteArrayOf())
+
+    /**
+     * Parses the string using the same structure which is returned by [stringValue].
+     *
+     * The bytes should signed, ranging from `-127` to `127`.
+     *
+     * @param value A string with a structure like `[0, -32, 48, 127]`
+     *
+     * @throws IllegalArgumentException if the string does not have the exact format outputted by [stringValue]
+     */
+    @Throws(IllegalArgumentException::class)
+    constructor(value: String): this(value
+        .removeSurrounding("[", "]")
+        .split(", ")
+        .takeIf { it.size > 1 || it.firstOrNull()?.isNotEmpty() == true }
+        ?.map { it.toByte() }
+        ?.toByteArray()
+        ?: byteArrayOf()
+    )
+
+    override fun toTechnicalString(): String {
+        return "NbtByteArray$stringValue"
+    }
+
     /**
      * Properly checks the equality of the array.
      */
@@ -160,19 +386,60 @@ data class NbtByteArray(var value: ByteArray): NbtTag() {
  */
 data class NbtString(var value: String): NbtTag() {
     /**
+     * Returns a string which is wrapped by this tag.
+     */
+    override val stringValue: String
+        get() = value
+
+    override fun toTechnicalString(): String {
+        return buildString {
+            append("NbtString(\"")
+            append(
+                value.replace("\\", "\\\\")
+                    .replace("\"", "\\\"")
+            )
+            append("\")")
+        }
+    }
+
+    /**
      * Returns a new wrapper with the current value.
      */
     override fun deepCopy() = copy()
 }
 
 /**
- * A tag which contains a [MutableList] structure of [NbtTag]s. All items in the list must have the same class.
- * Null values in the list are not allowed.
- * The tags in the list will be linked so any modification will also change this tag contents.
+ * A tag which contains a [MutableList] structure of [NbtTag]s. All children must have the same class.
+ *
  * @param T The type of the tag that will be wrapped. [NbtEnd] and [NbtTag] are not valid.
  */
 @Suppress("UNCHECKED_CAST")
-class NbtList<T: NbtTag>(tags: Collection<T>): NbtTag(), MutableList<T> by tags.toMutableList() {
+class NbtList<T: NbtTag> private constructor(private val tags: ArrayList<T>): NbtTag(), MutableList<T> by tags, RandomAccess {
+    /**
+     * Returns a string representation of the tag's value.
+     *
+     * The output will be similar to a normal [List].
+     *
+     * The class names of the children tags will exposed.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     *
+     * Be aware that this may be a slow operation on big lists, arrays or compounds.
+     */
+    override val stringValue: String
+        get() = tags.toString()
+
+    /**
+     * Constructs a [NbtList] with the same contents of the given [Collection].
+     *
+     * All items in the list must have the same class.
+     *
+     * Null values in the list are not allowed.
+     *
+     * The tags in the list will be linked so any modification will also change this tag contents.
+     */
+    constructor(tags: Collection<T>): this(ArrayList(tags))
+
     /**
      * Creates a empty list.
      */
@@ -199,9 +466,90 @@ class NbtList<T: NbtTag>(tags: Collection<T>): NbtTag(), MutableList<T> by tags.
     constructor(tags: NbtList<T>): this(tags as Collection<T>)
 
     /**
+     * Parses the string using the same structure which is returned by [stringValue].
+     *
+     * @param value A string with a structure like `[NbtInt(0), NbtInt(-32), NbtInt(48), NbtInt(127)]`
+     *
+     * @throws IllegalArgumentException if the string does not have the exact format outputted by [stringValue]
+     */
+    @Throws(IllegalArgumentException::class)
+    constructor(value: String): this(NbtListStringParser(value).parseList() as ArrayList<T>)
+
+    override fun add(element: T): Boolean {
+        checkTagType(element)
+        return tags.add(element)
+    }
+
+    override fun add(index: Int, element: T) {
+        checkTagType(element)
+        return tags.add(index, element)
+    }
+
+    override fun set(index: Int, element: T): T {
+        if (size > 1) {
+            checkTagType(element)
+        }
+        return tags.set(index, element)
+    }
+
+    override fun subList(fromIndex: Int, toIndex: Int): MutableList<T> {
+        val subList = tags.subList(fromIndex, toIndex)
+        return object : MutableList<T> by subList, RandomAccess {
+            override fun set(index: Int, element: T): T {
+                checkTagType(element)
+                return subList.set(index, element)
+            }
+
+            override fun toString(): String {
+                return tags.toString()
+            }
+
+            override fun equals(other: Any?): Boolean {
+                return subList == other
+            }
+
+            override fun hashCode(): Int {
+                return subList.hashCode()
+            }
+        }
+    }
+
+    private fun checkTagType(tag: NbtTag) {
+        val childrenType = firstOrNull()?.javaClass ?: return
+        require(childrenType == tag.javaClass) {
+            "NbtList must have all children tags of the same type. \n" +
+                    "Tried to add a ${tag.javaClass.simpleName} tag in a NbtList of ${childrenType.javaClass.simpleName}"
+        }
+    }
+
+    /**
      * Returns a new NbtList with all nested values copied deeply.
      */
     override fun deepCopy() = NbtList(map { it.deepCopy() as T })
+
+    /**
+     * A technical string representation of this tag, containing the tag type and it's value,
+     * appropriated for developer inspections.
+     *
+     * The output will have be similar to a normal [List].
+     *
+     * Be aware that this may be a slow operation on big lists, arrays or compounds.
+     */
+    override fun toTechnicalString(): String {
+        if (tags.isEmpty()) {
+            return "NbtList[]"
+        }
+        return tags.joinToString(prefix = "NbtList[", postfix = "]")
+    }
+
+    override fun equals(other: Any?): Boolean {
+        return tags == other
+    }
+
+    override fun hashCode(): Int {
+        return tags.hashCode()
+    }
+
 
     /**
      * Contains useful methods to create [NbtList]s from Java.
@@ -358,9 +706,31 @@ class NbtList<T: NbtTag>(tags: Collection<T>): NbtTag(), MutableList<T> by tags.
  * does not match the requested type.
  *
  * @param value A [Map] which contains all key-value mappings.
- * The tags in the map will be linked so any modification will also change this tag contents.
  */
-class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, NbtTag> by LinkedHashMap(value) {
+class NbtCompound private constructor(private val value: LinkedHashMap<String, NbtTag>) : NbtTag(), MutableMap<String, NbtTag> by value {
+    /**
+     * Returns a string representation of the tag's value.
+     *
+     * The output will be similar to a normal [Map].
+     *
+     * The class names of the children will exposed.
+     *
+     * The returned string is compatible with string constructors of the same type.
+     *
+     * Be aware that this may be a slow operation on compounds.
+     */
+    override val stringValue: String
+        get() = value.takeIf { it.isNotEmpty() }?.entries?.joinToString(prefix = "{", postfix = "}") { (key, tag) ->
+            '"' + key.replace("\\", "\\\\").replace("\"", "\\\"") + "\"=" + tag
+        } ?: "{}"
+
+    /**
+     * Creates a new compound containing the same mappings as the given [Map].
+     *
+     * The tags in the map will be linked so any modification will also change this tag contents.
+     */
+    constructor(value: Map<String, NbtTag>): this(LinkedHashMap(value))
+
     /**
      * Creates an empty compound.
      */
@@ -379,6 +749,12 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
      * The given tags will be linked, so modifications to them will also affects the compound value.
      */
     constructor(tags: Iterable<Pair<String, NbtTag>>): this(tags.toMap())
+
+    /**
+     * @throws IllegalArgumentException if the string does not have the exact format outputted by [stringValue]
+     */
+    @Throws(IllegalArgumentException::class)
+    constructor(value: String): this(NbtCompoundStringParser(value).parseCompound())
 
     /**
      * Directly maps a [NbtTag] to a key. The value must not be [NbtEnd].
@@ -464,7 +840,7 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
      * @throws NoSuchElementException If the key is not present on the compound
      */
     @Throws(ClassCastException::class, NoSuchElementException::class)
-    fun getByte(key: String) = (require(key) as NbtByte).value
+    fun getByte(key: String) = (require(key) as NbtByte).signed
     /**
      * Returns the unwrapped short value.
      * @throws ClassCastException If the [NbtTag] is not a [NbtShort]
@@ -662,7 +1038,7 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
      * @throws ClassCastException If the [NbtTag] is not a [NbtByte]
      */
     @Throws(ClassCastException::class)
-    fun getNullableByte(key: String) = this[key]?.let { it as NbtByte }?.value
+    fun getNullableByte(key: String) = this[key]?.let { it as NbtByte }?.signed
     /**
      * Returns the unwrapped short value or null if no value is mapped or it is mapped to an other type tag.
      * @throws ClassCastException If the [NbtTag] is not a [NbtShort]
@@ -900,6 +1276,42 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
      * Returns a new NbtCompound with all nested values copied deeply.
      */
     override fun deepCopy() = NbtCompound(mapValues { it.value.deepCopy() })
+
+    /**
+     * A technical string representation of this tag, containing the tag type and it's value,
+     * appropriated for developer inspections.
+     *
+     * The output will be similar to a normal [Map].
+     *
+     * Be aware that this may be a slow operation on compounds.
+     */
+    override fun toTechnicalString(): String {
+        if (value.isEmpty()) {
+            return "NbtCompound{}"
+        }
+        return "NbtCompound$stringValue"
+        /*return buildString {
+            append("NbtCompound{")
+            val iterator = value.iterator()
+            while (iterator.hasNext()) {
+                val (key, tag) = iterator.next()
+                append(key).append('=').append(tag)
+                if (iterator.hasNext()) {
+                    append(", ")
+                }
+            }
+            append('}')
+        }*/
+    }
+
+    override fun equals(other: Any?): Boolean {
+        return value == other
+    }
+
+    override fun hashCode(): Int {
+        return value.hashCode()
+    }
+
 }
 
 /**
@@ -907,6 +1319,50 @@ class NbtCompound(value: Map<String, NbtTag>) : NbtTag(), MutableMap<String, Nbt
  * @property value The wrapped value
  */
 data class NbtIntArray(var value: IntArray): NbtTag() {
+    /**
+     * Returns a string representation of the tag's value with a structure similar to a normal [List].
+     *
+     * The returned string is compatible with string constructors of the same type.
+     *
+     * Be aware that this may be a slow operation on big arrays.
+     */
+    override val stringValue: String
+        get() = value.takeIf { it.isNotEmpty() }?.joinToString(prefix = "[", postfix = "]") ?: "[]"
+
+    /**
+     * Creates a new tag with an empty array.
+     */
+    constructor(): this(intArrayOf())
+
+    /**
+     * Parses the string using the same structure which is returned by [stringValue].
+     *
+     * @param value A string with a structure like `[0, -32, 48, 127]`
+     *
+     * @throws IllegalArgumentException if the string does not have the exact format outputted by [stringValue]
+     */
+    @Throws(IllegalArgumentException::class)
+    constructor(value: String): this(value
+        .removeSurrounding("[", "]")
+        .split(", ")
+        .takeIf { it.size > 1 || it.firstOrNull()?.isNotEmpty() == true }
+        ?.map { it.toInt() }
+        ?.toIntArray()
+        ?: intArrayOf()
+    )
+
+    /**
+     * A technical string representation of this tag, containing the tag type and it's value,
+     * appropriated for developer inspections.
+     *
+     * The output will be similar to a normal [List].
+     *
+     * Be aware that this may be a slow operation on big arrays.
+     */
+    override fun toTechnicalString(): String {
+        return "NbtIntArray$stringValue"
+    }
+
     /**
      * Properly checks the equality of the array.
      */
@@ -939,6 +1395,50 @@ data class NbtIntArray(var value: IntArray): NbtTag() {
  * @property value The wrapped value
  */
 data class NbtLongArray(var value: LongArray) : NbtTag() {
+    /**
+     * Returns a string representation of the tag's value with a structure similar to a normal [List].
+     *
+     * The returned string is compatible with string constructors of the same type.
+     *
+     * Be aware that this may be a slow operation on big arrays.
+     */
+    override val stringValue: String
+        get() = value.takeIf { it.isNotEmpty() }?.joinToString(prefix = "[", postfix = "]") ?: "[]"
+
+    /**
+     * Creates a new tag with an empty array.
+     */
+    constructor(): this(longArrayOf())
+
+    /**
+     * Parses the string using the same structure which is returned by [stringValue].
+     *
+     * @param value A string with a structure like `[0, -32, 48, 127]`
+     *
+     * @throws IllegalArgumentException if the string does not have the exact format outputted by [stringValue]
+     */
+    @Throws(IllegalArgumentException::class)
+    constructor(value: String): this(value
+        .removeSurrounding("[", "]")
+        .split(", ")
+        .takeIf { it.size > 1 || it.firstOrNull()?.isNotEmpty() == true }
+        ?.map { it.toLong() }
+        ?.toLongArray()
+        ?: longArrayOf()
+    )
+
+    /**
+     * A technical string representation of this tag, containing the tag type and it's value,
+     * appropriated for developer inspections.
+     *
+     * The output will be similar to a normal [List].
+     *
+     * Be aware that this may be a slow operation on big arrays.
+     */
+    override fun toTechnicalString(): String {
+        return "NbtLongArray$stringValue"
+    }
+
     /**
      * Properly checks the equality of the array.
      */

@@ -126,7 +126,7 @@ private object NbtByteSerial: NbtSerial<NbtByte>(NbtByte::class) {
     }
 
     override fun writeTag(output: DataOutputStream, tag: NbtByte) {
-        output.writeByte(tag.value.toInt())
+        output.writeByte(tag.signed.toInt())
     }
 }
 
