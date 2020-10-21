@@ -17,6 +17,8 @@ Click the link above to see the future.
 - `stringValue` property to `NbtTag`
 - `unsiged` property to `NbtByte` 
 - A static function `NbtByte.unsigned(String)` to a create `NbtByte` from unsigned strings.
+- Little endian `DataInput` and `DataOutput` implementations
+- Support to read and write Bedrock Edition NBT files using `NbtIO`
 
 ### Changed
 - `NbtByte`'s `Int` constructor now throws `NumberFormatException` if the number is outside the `0..255` range. **(Breaking Change)** 
