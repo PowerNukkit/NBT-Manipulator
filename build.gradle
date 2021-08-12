@@ -82,24 +82,19 @@ uploadArchives {
     }
 }
 
+tasks.dokkaJavadoc.configure {
+    outputDirectory.set(new File(buildDir, "javadoc"))
+}
+
 tasks.dokkaGfm.configure {
     outputDirectory.set(new File(buildDir, "kdoc"))
 }
 
 import java.nio.file.Files
-import java.nio.file.Paths
 import java.nio.file.StandardCopyOption
 task createReadmeFiles(dependsOn: dokkaGfm) {
     doFirst {
-        Files.walk(Paths.get(dokkaGfm.outputDirectory.get()))
-                .filter { it.getFileName().toString().toLowerCase() == "index.md" }
-                .forEach {
-                    try {
-                        Files.copy(it, it.resolveSibling("README.md"), StandardCopyOption.REPLACE_EXISTING)
-                    } catch (Throwable e) {
-                        throw new RuntimeException(e)
-                    }
-                }
+        Files.copy(projectDir.toPath().resolve("README.md"), dokkaGfm.outputDirectory.get().toPath().resolve("nbt-manipulator/index.md"), StandardCopyOption.REPLACE_EXISTING)
     }
 }
 
@@ -168,7 +163,7 @@ gitPublish {
         from("$buildDir/javadoc") {
             into 'javadoc'
         }
-        from("$buildDir/kdoc") {
+        from("$buildDir/kdoc/nbt-manipulator") {
             into 'kdoc'
         }
         from "$buildDir/pages"
