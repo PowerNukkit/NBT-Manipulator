@@ -1,10 +1,9 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.3.61'
-    id 'com.jfrog.bintray' version '1.8.4'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.21'
     id 'maven'
-    id 'org.jetbrains.dokka' version '0.9.18'
-    id 'org.ajoberstar.git-publish' version '2.1.1'
+    id 'org.jetbrains.dokka' version '1.5.0'
+    //id 'org.ajoberstar.git-publish' version '3.0.0'
 }
 
 group 'br.com.gamemods'
@@ -16,7 +15,7 @@ sourceCompatibility = 1.8
 targetCompatibility = sourceCompatibility
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -66,50 +65,7 @@ install {
         }
     }
 }
-
-if (!ext.has('gamemodsBintrayUser')) {
-    ext.gamemodsBintrayUser = ""
-}
-if (!ext.has('gamemodsBintrayApiKey')) {
-    ext.gamemodsBintrayApiKey = ""
-}
-
-bintray {
-    user = "$gamemodsBintrayUser"
-    key = "$gamemodsBintrayApiKey"
-    configurations = ['archives']
-    pkg {
-        repo = 'GameMods'
-        name = 'NBT-Manipulator'
-        userOrg = 'gamemods'
-        licenses = ['MIT']
-        vcsUrl = 'https://github.com/GameModsBR/NBT-Manipulator.git'
-        websiteUrl = 'https://github.com/GameModsBR/NBT-Manipulator'
-        //publish = false
-        version {
-            name = project.version
-            desc = "NBT-Manipulator version ${project.version}"
-            //released = new Date()
-            vcsTag = "v${project.version}"
-            gpg {
-                sign = !project.hasProperty('binariesOnly') //Determines whether to GPG sign the files. The default is false
-                //passphrase = '123' //Optional. The passphrase for GPG signing'
-            }
-        }
-    }
-}
-
-task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
-    outputFormat = 'javadoc'
-    outputDirectory = "$buildDir/javadoc"
-}
-
-
-task dokkaKdoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
-    outputFormat = 'gfm'
-    outputDirectory = "$buildDir/kdoc"
-}
-
+/*
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.nio.file.StandardCopyOption
@@ -132,6 +88,7 @@ task createIndexMd(type: Copy) {
     into "$buildDir/pages"
     rename 'README.md', 'index.md'
 }
+*/
 
 task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
     classifier = 'javadoc'
@@ -158,19 +115,16 @@ jar {
     from file("$projectDir/CHANGELOG.md")
 }
 
-if (!project.hasProperty('binariesOnly')) {
+//if (!project.hasProperty('binariesOnly')) {
     artifacts {
         archives sourcesJar
     }
 
-    // dokka will fail to build the javadoc jar on newest java versions
-    // https://github.com/Kotlin/dokka/issues/294
-    if (JavaVersion.current().majorVersion == "8") {
+//    if (JavaVersion.current().majorVersion == "8") {
         artifacts {
             archives javadocJar
         }
-
-        if (ext.has('org.ajoberstar.grgit.auth.username')) {
+/*        if (ext.has('org.ajoberstar.grgit.auth.username')) {
             System.setProperty('org.ajoberstar.grgit.auth.username', ext['org.ajoberstar.grgit.auth.username'].toString())
             System.setProperty('org.ajoberstar.grgit.auth.password', ext['org.ajoberstar.grgit.auth.password'].toString())
         }
@@ -217,3 +171,4 @@ if (!project.hasProperty('binariesOnly')) {
 gitPublishCopy.dependsOn dokkaJavadoc
 gitPublishCopy.dependsOn createReadmeFiles
 gitPublishCopy.dependsOn createIndexMd
+*/
