@@ -1,11 +1,9 @@
+//[nbt-manipulator](index.md)
 
+# nbt-manipulator
 
-### Packages
+## Packages
 
-| Name | Summary |
-|---|---|
-| [br.com.gamemods.nbtmanipulator](br.com.gamemods.nbtmanipulator/index.md) |  |
-
-### Index
-
-[All Types](alltypes/index.md)
+| Name |
+|---|
+| [br.com.gamemods.nbtmanipulator](nbt-manipulator/br.com.gamemods.nbtmanipulator/index.md) |
