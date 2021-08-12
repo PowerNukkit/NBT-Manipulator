@@ -2,12 +2,14 @@ plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.5.21'
     id 'maven'
+    id 'signing'
     id 'org.jetbrains.dokka' version '1.5.0'
     id 'org.ajoberstar.git-publish' version '3.0.0'
 }
 
 group 'br.com.gamemods'
 version '3.0.0-SNAPSHOT'
+archivesBaseName = project.name
 
 sourceSets.main.java.srcDirs = ["src/main/kotlin"]
 
@@ -32,35 +34,49 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            packaging 'jar'
-            groupId project.group
-            artifactId project.name
-            version project.version
-            name project.name
-            description "A kotlin/java lib that allows you to read and write NBT data in a clean way"
-            url "https://github.com/GameModsBR/NBT-Manipulator"
-            inceptionYear '2020'
-            licenses {
-                license {
-                    name 'MIT'
-                    url 'https://raw.githubusercontent.com/GameModsBR/NBT-Manipulator/master/LICENSE'
-                    distribution 'repo'
-                }
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            if (findProperty('signing.secretKeyRingFile') != 'undefined') {
+                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
             }
-            developers {
-                developer {
-                    id = 'joserobjr'
-                    name = 'José Roberto de Araújo Júnior'
-                    email = 'joserobjr@gamemods.com.br'
-                }
+
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
             }
-            scm {
-                connection "https://github.com/GameModsBR/NBT-Manipulator.git"
-                developerConnection "https://github.com/GameModsBR/NBT-Manipulator.git"
-                url "https://github.com/GameModsBR/NBT-Manipulator"
+
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                packaging 'jar'
+                groupId project.group
+                artifactId project.name
+                version project.version
+                name project.name
+                description "A kotlin/java lib that allows you to read and write NBT data in a clean way"
+                url "https://github.com/PowerNukkit/NBT-Manipulator"
+                inceptionYear '2020'
+                licenses {
+                    license {
+                        name 'MIT'
+                        url 'https://raw.githubusercontent.com/PowerNukkit/NBT-Manipulator/master/LICENSE'
+                        distribution 'repo'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'joserobjr'
+                        name = 'José Roberto de Araújo Júnior'
+                        email = 'joserobjr@powernukkit.org'
+                    }
+                }
+                scm {
+                    connection "https://github.com/PowerNukkit/NBT-Manipulator.git"
+                    developerConnection "https://github.com/PowerNukkit/NBT-Manipulator.git"
+                    url "https://github.com/PowerNukkit/NBT-Manipulator"
+                }
             }
         }
     }
@@ -123,6 +139,12 @@ artifacts {
     archives javadocJar
 }
 
+if (findProperty('signing.secretKeyRingFile') != 'undefined') {
+    signing {
+        sign configurations.archives
+    }
+}
+
 if (ext.has('org.ajoberstar.grgit.auth.username')) {
     System.setProperty('org.ajoberstar.grgit.auth.username', ext['org.ajoberstar.grgit.auth.username'].toString())
     System.setProperty('org.ajoberstar.grgit.auth.password', ext['org.ajoberstar.grgit.auth.password'].toString())
@@ -130,7 +152,7 @@ if (ext.has('org.ajoberstar.grgit.auth.username')) {
 
 gitPublish {
     // where to publish to (repo must exist)
-    repoUri = 'https://github.com/GameModsBR/NBT-Manipulator.git'
+    repoUri = 'https://github.com/PowerNukkit/NBT-Manipulator.git'
 
     // where to fetch from prior to fetching from the remote (i.e. a local repo to save time)
     //referenceRepoUri = file("$projectDir/gh-pages").toURI().toString()
