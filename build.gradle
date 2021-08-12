@@ -8,7 +8,7 @@ plugins {
 }
 
 group 'br.com.gamemods'
-version '3.0.0'
+version '3.0.1-SNAPSHOT'
 archivesBaseName = project.name
 
 sourceSets.main.java.srcDirs = ["src/main/kotlin"]
