@@ -1,0 +1,6 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:br.com.gamemods.nbtmanipulator/NbtByte.Companion///PointingToDeclaration/br/com/gamemods/nbtmanipulator/NbtByte.Companion.html
+$dokka.location:br.com.gamemods.nbtmanipulator/NbtList.Companion///PointingToDeclaration/br/com/gamemods/nbtmanipulator/NbtList.Companion.html
+br.com.gamemods.nbtmanipulator
+
