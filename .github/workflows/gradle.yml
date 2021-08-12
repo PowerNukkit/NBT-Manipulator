@@ -24,7 +24,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew build -PbinariesOnly
+      run: ./gradlew build
     - name: Rename artifacts
       run: mv build/libs/nbt-manipulator-*.jar build/libs/nbt-manipulator.jar
     - name: Archive artifacts
