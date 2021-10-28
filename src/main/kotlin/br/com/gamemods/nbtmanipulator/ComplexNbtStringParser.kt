@@ -15,8 +15,8 @@ internal abstract class ComplexNbtStringParser(fatherOpenChar: Char, fatherClose
     protected var closeChar = '\u0000'
     protected var endIndex = -2
 
-    protected var openBlocks = 0
-    protected var openString = false
+    private var openBlocks = 0
+    private var openString = false
     private val scanChars = charArrayOf('"', openChar, closeChar)
 
     protected fun parseBeginning() {
@@ -98,7 +98,7 @@ internal abstract class ComplexNbtStringParser(fatherOpenChar: Char, fatherClose
         }
     }
 
-    protected tailrec fun findTheCloseBracket() {
+    private tailrec fun findTheCloseBracket() {
         val index = input.indexOfAny(scanChars, endIndex + 1)
         require(index > endIndex) { "Invalid input. Could not find the close bracket." }
         endIndex = index

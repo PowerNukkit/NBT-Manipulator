@@ -11,7 +11,7 @@ import java.lang.UnsupportedOperationException
  * @author joserobjr
  * @since 2020-10-20
  */
-class LittleEndianDataInputStream(`in`: InputStream) : FilterInputStream(`in`), DataInput {
+public class LittleEndianDataInputStream(`in`: InputStream) : FilterInputStream(`in`), DataInput {
     override fun readFully(b: ByteArray) {
         readFully(b, 0, b.size)
     }

@@ -1,5 +1,4 @@
 @file:JvmName("_NbtIO_Internal")
-@file:Suppress("unused")
 
 package br.com.gamemods.nbtmanipulator
 
@@ -11,7 +10,7 @@ import kotlin.reflect.KClass
 /**
  * Contains useful methods do read and write [NbtFile] from [File] and [InputStream]/[OutputStream].
  */
-object NbtIO {
+public object NbtIO {
     /**
      * Calls [writeNbtFile] using the information stored in the [NbtFile], uses the method's default when the information
      * is missing (null).  This method does not write the Bedrock Edition version and length headers.
@@ -20,7 +19,7 @@ object NbtIO {
      */
     @JvmStatic
     @Throws(IOException::class)
-    fun writeNbtFileAsOriginal(outputStream: OutputStream, file: NbtFile) {
+    public fun writeNbtFileAsOriginal(outputStream: OutputStream, file: NbtFile) {
         writeNbtFile(outputStream, file, 
             compressed = file.isCompressed ?: true,
             littleEndian = file.isLittleEndian ?: false
@@ -37,7 +36,7 @@ object NbtIO {
     @JvmStatic
     @Throws(IOException::class)
     @JvmOverloads
-    fun writeNbtFile(outputStream: OutputStream, file: NbtFile, compressed: Boolean = true, littleEndian: Boolean = false) {
+    public fun writeNbtFile(outputStream: OutputStream, file: NbtFile, compressed: Boolean = true, littleEndian: Boolean = false) {
         val output = if (compressed) GZIPOutputStream(outputStream) else outputStream
         val dataOut: DataOutput = if (littleEndian) LittleEndianDataOutputStream(output) else DataOutputStream(output)
         writeNbtFileDirectly(dataOut, file)
@@ -54,7 +53,7 @@ object NbtIO {
      */
     @JvmStatic
     @Throws(IOException::class)
-    fun writeNbtFileDirectly(output: DataOutput, file: NbtFile) {
+    public fun writeNbtFileDirectly(output: DataOutput, file: NbtFile) {
         val tag = file.tag
         val typeId = tag.typeId
         val serializer = serializers[typeId]
@@ -78,7 +77,7 @@ object NbtIO {
     @JvmStatic
     @Throws(IOException::class)
     @JvmOverloads
-    fun writeNbtFile(
+    public fun writeNbtFile(
         file: File, tag: NbtFile, compressed: Boolean = true, 
         littleEndian: Boolean = false, writeHeaders: Boolean = false
     ) {
@@ -124,7 +123,7 @@ object NbtIO {
     @JvmStatic
     @Throws(IOException::class)
     @JvmOverloads
-    fun readNbtFile(
+    public fun readNbtFile(
         inputStream: InputStream, compressed: Boolean = true, 
         littleEndian: Boolean = false, readHeaders: Boolean = false
     ): NbtFile {
@@ -154,7 +153,7 @@ object NbtIO {
      */
     @JvmStatic
     @Throws(IOException::class)
-    fun readNbtFileDirectly(input: DataInput): NbtFile {
+    public fun readNbtFileDirectly(input: DataInput): NbtFile {
         val typeId = input.readUnsignedByte()
         val serializer = serializers[typeId]
 
@@ -173,7 +172,7 @@ object NbtIO {
     @JvmStatic
     @Throws(IOException::class)
     @JvmOverloads
-    fun readNbtFile(
+    public fun readNbtFile(
         file: File, compressed: Boolean = true,
         littleEndian: Boolean = false, 
         readHeaders: Boolean = false
@@ -188,7 +187,7 @@ object NbtIO {
      */
     @JvmStatic
     @Throws(IOException::class)
-    fun readNbtFileDetectingSettings(file: File): NbtFile {
+    public fun readNbtFileDetectingSettings(file: File): NbtFile {
         RandomAccessFile(file, "r").use { openFile ->
             var ex: IOException? = null
             fun retry(compressed: Boolean, littleEndian: Boolean, readHeaders: Boolean): NbtFile? {

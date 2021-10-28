@@ -11,7 +11,7 @@ import java.lang.Long.reverseBytes
  * @author joserobjr
  * @since 2020-10-20
  */
-class LittleEndianDataOutputStream(out: OutputStream) : FilterOutputStream(DataOutputStream(out)), DataOutput {
+public class LittleEndianDataOutputStream(out: OutputStream) : FilterOutputStream(DataOutputStream(out)), DataOutput {
     private val data = out as DataOutputStream 
     override fun writeBoolean(v: Boolean) {
         data.writeBoolean(v)
@@ -55,7 +55,7 @@ class LittleEndianDataOutputStream(out: OutputStream) : FilterOutputStream(DataO
 
     override fun writeChars(s: String) {
         s.forEach { char ->
-            writeChar(char.toInt())
+            writeChar(char.code)
         }
     }
 

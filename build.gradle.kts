@@ -30,6 +30,10 @@ java {
     targetCompatibility = sourceCompatibility
 }
 
+kotlin {
+    explicitApi()
+}
+
 repositories {
     mavenCentral()
 }
