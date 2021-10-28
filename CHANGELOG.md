@@ -131,7 +131,7 @@ Useful for Java users and who couldn't get the sources or javadoc.
 [Download 0.0.2]: https://search.maven.org/artifact/br.com.gamemods/nbt-manipulator/0.0.2/jar
 [Download 0.0.1]: https://search.maven.org/artifact/br.com.gamemods/nbt-manipulator/0.0.1/jar
 
-[KDoc 3.1.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/befc6973c88b1b37a32754c133b70c75f305ec96/kdoc/br.com.gamemods.nbtmanipulator/index.md
+[KDoc 3.1.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/5ec17b901033d589bce5b613420aa2682df50c9a/kdoc/br.com.gamemods.nbtmanipulator/index.md
 [KDoc 3.0.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/e4b3e63039419ce9d927dbf2d283f5b56ab762c7/kdoc/br.com.gamemods.nbtmanipulator/index.md
 [KDoc 2.0.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/144c1aec6b9fbb2ce7996e200a9637f9b868c8d9/kdoc/br.com.gamemods.nbtmanipulator/index.md
 [KDoc 1.1.0]: https://github.com/GameModsBR/NBT-Manipulator/blob/f188707e1d9a5616db1ccd45e892171349ee5a62/kdoc/br.com.gamemods.nbtmanipulator/index.md
