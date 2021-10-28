@@ -4,16 +4,12 @@
 
 [jvm]\
 
-@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)()
+@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)
 
-fun [createShortSublist](create-short-sublist.md)(vararg tags: [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)<[Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)>): [NbtList](../index.md)<[NbtList](../index.md)<[NbtShort](../../-nbt-short/index.md)>>
+fun [createShortSublist](create-short-sublist.md)(vararg tags: [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)&lt;[Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)&gt;): [NbtList](../index.md)&lt;[NbtList](../index.md)&lt;[NbtShort](../../-nbt-short/index.md)&gt;&gt;
 
-@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)()
+@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)
 
-fun [createShortSublist](create-short-sublist.md)(vararg tags: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)>): [NbtList](../index.md)<[NbtList](../index.md)<[NbtShort](../../-nbt-short/index.md)>>
-
-@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)()
-
-fun [createShortSublist](create-short-sublist.md)(vararg tags: [ShortArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short-array/index.html)): [NbtList](../index.md)<[NbtList](../index.md)<[NbtShort](../../-nbt-short/index.md)>>
+fun [createShortSublist](create-short-sublist.md)(vararg tags: [ShortArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short-array/index.html)): [NbtList](../index.md)&lt;[NbtList](../index.md)&lt;[NbtShort](../../-nbt-short/index.md)&gt;&gt;
 
 Returns a [NbtList](../index.md) contained all elements wrapped in the appropriated [NbtTag](../../-nbt-tag/index.md).

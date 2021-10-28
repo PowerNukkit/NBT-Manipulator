@@ -9,7 +9,7 @@ Returns a string representation of the tag's value.
 
 The output will be similar to a normal [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html).
 
-The class names of the children tags will exposed.
+The class names of the children tags will expose.
 
 The returned string is compatible with string constructors of the same type.
 

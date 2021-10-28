@@ -3,13 +3,13 @@
 # getNullableByteArrayList
 
 [jvm]\
-fun [getNullableByteArrayList](get-nullable-byte-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtByteArray](../-nbt-byte-array/index.md)>?
+fun [getNullableByteArrayList](get-nullable-byte-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtByteArray](../-nbt-byte-array/index.md)&gt;?
 
 Returns the [NbtList](../-nbt-list/index.md) of byte arrays mapped to that key. The tag and it's value will be linked and any modification will also change the mapped value.
 
-Will return null if no value is mapped or it is mapped to an other type tag.
+Will return null if no value is mapped, or it is mapped to another type tag.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

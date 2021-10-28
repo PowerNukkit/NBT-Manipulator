@@ -3,11 +3,11 @@
 # getShortList
 
 [jvm]\
-fun [getShortList](get-short-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtShort](../-nbt-short/index.md)>
+fun [getShortList](get-short-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtShort](../-nbt-short/index.md)&gt;
 
 Returns the [NbtList](../-nbt-list/index.md) of shorts mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

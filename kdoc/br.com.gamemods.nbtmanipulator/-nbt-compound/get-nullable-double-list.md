@@ -3,13 +3,13 @@
 # getNullableDoubleList
 
 [jvm]\
-fun [getNullableDoubleList](get-nullable-double-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtDouble](../-nbt-double/index.md)>?
+fun [getNullableDoubleList](get-nullable-double-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtDouble](../-nbt-double/index.md)&gt;?
 
 Returns the [NbtList](../-nbt-list/index.md) of doubles mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-Will return null if no value is mapped or it is mapped to an other type tag.
+Will return null if no value is mapped, or it is mapped to another type tag.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

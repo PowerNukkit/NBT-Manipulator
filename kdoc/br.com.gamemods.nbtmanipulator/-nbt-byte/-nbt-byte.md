@@ -28,7 +28,7 @@ jvm
 |---|---|
 | unsigned | Unsigned value from 0 to 255. |
 
-#### Throws
+## Throws
 
 | | |
 |---|---|
@@ -47,11 +47,11 @@ jvm
 |---|---|
 | signed | Signed value from -128 to 127. |
 
-#### Throws
+## Throws
 
 | | |
 |---|---|
-| [kotlin.NumberFormatException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number-format-exception/index.html) | if the number is not within a valid range or if the string does not contains a valid number. |
+| [kotlin.NumberFormatException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number-format-exception/index.html) | if the number is not within a valid range or if the string does not contain a valid number. |
 
 [jvm]\
 fun [NbtByte](-nbt-byte.md)(signed: [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html))

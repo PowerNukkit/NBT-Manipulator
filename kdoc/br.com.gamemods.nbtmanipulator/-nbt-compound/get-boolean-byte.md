@@ -7,7 +7,7 @@ fun [getBooleanByte](get-boolean-byte.md)(key: [String](https://kotlinlang.org/a
 
 Returns true if [getByte](get-byte.md) returns 1, false otherwise.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

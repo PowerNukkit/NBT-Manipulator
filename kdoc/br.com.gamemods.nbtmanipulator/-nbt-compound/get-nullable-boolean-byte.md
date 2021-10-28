@@ -7,7 +7,7 @@ fun [getNullableBooleanByte](get-nullable-boolean-byte.md)(key: [String](https:/
 
 Returns true if [getByte](get-byte.md) returns 1, false otherwise. Will also return false if the value is not mapped.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

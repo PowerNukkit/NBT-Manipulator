@@ -3,7 +3,7 @@
 # NbtString
 
 [jvm]\
-data class [NbtString](index.md)(**value**: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [NbtTag](../-nbt-tag/index.md)
+data class [NbtString](index.md)(value: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)) : [NbtTag](../-nbt-tag/index.md)
 
 A tag which wraps a [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) value.
 
@@ -18,7 +18,7 @@ A tag which wraps a [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin
 | Name | Summary |
 |---|---|
 | [deepCopy](deep-copy.md) | [jvm]<br>open override fun [deepCopy](deep-copy.md)(): [NbtString](index.md)<br>Returns a new wrapper with the current value. |
-| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type and it's value, appropriated for developer inspections. |
+| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type, and it's value, appropriated for developer inspections. |
 
 ## Properties
 

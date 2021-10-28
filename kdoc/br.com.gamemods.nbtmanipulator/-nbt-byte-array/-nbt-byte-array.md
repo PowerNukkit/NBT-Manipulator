@@ -12,7 +12,7 @@ fun [NbtByteArray](-nbt-byte-array.md)(value: [String](https://kotlinlang.org/ap
 
 Parses the string using the same structure which is returned by [stringValue](string-value.md).
 
-The bytes should signed, ranging from -127 to 127.
+The bytes should be signed, ranging from -127 to 127.
 
 ## Parameters
 
@@ -22,7 +22,7 @@ jvm
 |---|---|
 | value | A string with a structure like [0, -32, 48, 127] |
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

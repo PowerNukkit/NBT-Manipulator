@@ -7,7 +7,7 @@ fun [require](require.md)(key: [String](https://kotlinlang.org/api/latest/jvm/st
 
 Returns the value corresponding to the given [key](require.md), or throw an exception if such a key is not present in the compound.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

@@ -3,7 +3,7 @@
 # LittleEndianDataOutputStream
 
 [jvm]\
-class [LittleEndianDataOutputStream](index.md)(**out**: [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)) : [FilterOutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/FilterOutputStream.html), [DataOutput](https://docs.oracle.com/javase/8/docs/api/java/io/DataOutput.html)
+class [LittleEndianDataOutputStream](index.md)(out: [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)) : [FilterOutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/FilterOutputStream.html), [DataOutput](https://docs.oracle.com/javase/8/docs/api/java/io/DataOutput.html)
 
 Implementation of [DataOutput](https://docs.oracle.com/javase/8/docs/api/java/io/DataOutput.html) that writes data to an [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) using little endian byte order.
 
@@ -27,7 +27,7 @@ jvm
 
 | | |
 |---|---|
-| [LittleEndianDataOutputStream](-little-endian-data-output-stream.md) | [jvm]<br>fun [LittleEndianDataOutputStream](-little-endian-data-output-stream.md)(out: [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html))<br>the underlying output stream. |
+| [LittleEndianDataOutputStream](-little-endian-data-output-stream.md) | [jvm]<br>fun [LittleEndianDataOutputStream](-little-endian-data-output-stream.md)(out: [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)) |
 
 ## Functions
 
@@ -52,4 +52,4 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [out](index.md#-1503055231%2FProperties%2F-1216412040) | [jvm]<br>val [out](index.md#-1503055231%2FProperties%2F-1216412040): [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) |
+| [out](index.md#-1721735352%2FProperties%2F-1216412040) | [jvm]<br>val [out](index.md#-1721735352%2FProperties%2F-1216412040): [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) |

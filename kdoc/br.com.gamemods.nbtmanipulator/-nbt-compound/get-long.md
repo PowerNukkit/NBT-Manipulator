@@ -7,7 +7,7 @@ fun [getLong](get-long.md)(key: [String](https://kotlinlang.org/api/latest/jvm/s
 
 Returns the unwrapped long value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

@@ -3,7 +3,7 @@
 # NbtDouble
 
 [jvm]\
-data class [NbtDouble](index.md)(**value**: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)) : [NbtTag](../-nbt-tag/index.md)
+data class [NbtDouble](index.md)(value: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)) : [NbtTag](../-nbt-tag/index.md)
 
 A tag which wraps a double value.
 
@@ -19,7 +19,7 @@ A tag which wraps a double value.
 | Name | Summary |
 |---|---|
 | [deepCopy](deep-copy.md) | [jvm]<br>open override fun [deepCopy](deep-copy.md)(): [NbtDouble](index.md)<br>Returns a new wrapper with the current value. |
-| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type and it's value, appropriated for developer inspections. |
+| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type, and it's value, appropriated for developer inspections. |
 
 ## Properties
 

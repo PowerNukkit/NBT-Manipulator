@@ -3,11 +3,11 @@
 # getListOfList
 
 [jvm]\
-fun [getListOfList](get-list-of-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtList](../-nbt-list/index.md)<*>>
+fun [getListOfList](get-list-of-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtList](../-nbt-list/index.md)&lt;*&gt;&gt;
 
 Returns the [NbtList](../-nbt-list/index.md) of lists mapped to that key. The tag and it's values will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

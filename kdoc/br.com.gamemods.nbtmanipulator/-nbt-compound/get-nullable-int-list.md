@@ -3,13 +3,13 @@
 # getNullableIntList
 
 [jvm]\
-fun [getNullableIntList](get-nullable-int-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtInt](../-nbt-int/index.md)>?
+fun [getNullableIntList](get-nullable-int-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtInt](../-nbt-int/index.md)&gt;?
 
 Returns the [NbtList](../-nbt-list/index.md) of integers mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-Will return null if no value is mapped or it is mapped to an other type tag.
+Will return null if no value is mapped, or it is mapped to another type tag.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

@@ -5,7 +5,7 @@
 [jvm]\
 fun [copyFrom](copy-from.md)(other: [NbtCompound](index.md), tagKey: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), default: [NbtTag](../-nbt-tag/index.md)? = null)
 
-Checks if the other compound have a given tag, if it has then place it in this compound.
+Checks if the other compound have a given tag, if it has been placed it in this compound.
 
 The tag will be linked, so any change in the tag will also affect both compounds.
 

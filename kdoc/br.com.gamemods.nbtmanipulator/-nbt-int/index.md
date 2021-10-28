@@ -3,7 +3,7 @@
 # NbtInt
 
 [jvm]\
-data class [NbtInt](index.md)(**value**: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) : [NbtTag](../-nbt-tag/index.md)
+data class [NbtInt](index.md)(value: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) : [NbtTag](../-nbt-tag/index.md)
 
 A tag which wraps an int value.
 
@@ -19,7 +19,7 @@ A tag which wraps an int value.
 | Name | Summary |
 |---|---|
 | [deepCopy](deep-copy.md) | [jvm]<br>open override fun [deepCopy](deep-copy.md)(): [NbtInt](index.md)<br>Returns a new wrapper with the current value. |
-| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type and it's value, appropriated for developer inspections. |
+| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type, and it's value, appropriated for developer inspections. |
 
 ## Properties
 

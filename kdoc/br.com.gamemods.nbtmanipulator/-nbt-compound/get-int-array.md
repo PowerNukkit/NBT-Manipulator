@@ -7,7 +7,7 @@ fun [getIntArray](get-int-array.md)(key: [String](https://kotlinlang.org/api/lat
 
 Returns the unwrapped int array value. The array will be linked and any modification will also change wrapper and the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

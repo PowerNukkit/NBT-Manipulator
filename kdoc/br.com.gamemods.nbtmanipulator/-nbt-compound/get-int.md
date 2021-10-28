@@ -7,7 +7,7 @@ fun [getInt](get-int.md)(key: [String](https://kotlinlang.org/api/latest/jvm/std
 
 Returns the unwrapped int value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

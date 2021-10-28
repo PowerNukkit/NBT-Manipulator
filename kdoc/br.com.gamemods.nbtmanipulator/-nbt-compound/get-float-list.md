@@ -3,11 +3,11 @@
 # getFloatList
 
 [jvm]\
-fun [getFloatList](get-float-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtFloat](../-nbt-float/index.md)>
+fun [getFloatList](get-float-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtFloat](../-nbt-float/index.md)&gt;
 
 Returns the [NbtList](../-nbt-list/index.md) of floats mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

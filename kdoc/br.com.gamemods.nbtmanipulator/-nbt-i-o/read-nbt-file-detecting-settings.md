@@ -4,7 +4,7 @@
 
 [jvm]\
 
-@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)()
+@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)
 
 fun [readNbtFileDetectingSettings](read-nbt-file-detecting-settings.md)(file: [File](https://docs.oracle.com/javase/8/docs/api/java/io/File.html)): [NbtFile](../-nbt-file/index.md)
 

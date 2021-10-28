@@ -4,7 +4,7 @@
 
 [jvm]\
 
-@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)()
+@[JvmStatic](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html)
 
 fun [writeNbtFileAsOriginal](write-nbt-file-as-original.md)(outputStream: [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html), file: [NbtFile](../-nbt-file/index.md))
 

@@ -9,7 +9,7 @@ Returns a string representation of the tag's value.
 
 The [NbtList](../-nbt-list/index.md) and the array types will have an output similar to a normal [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) and [NbtCompound](../-nbt-compound/index.md) to a normal [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html).
 
-The class names of the [NbtList](../-nbt-list/index.md)'s and [NbtCompound](../-nbt-compound/index.md)'s children will exposed.
+The class names of the [NbtList](../-nbt-list/index.md)'s and [NbtCompound](../-nbt-compound/index.md)'s children will expose.
 
 The returned string is compatible with string constructors of the same type.
 

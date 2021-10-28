@@ -7,7 +7,7 @@ fun [getShort](get-short.md)(key: [String](https://kotlinlang.org/api/latest/jvm
 
 Returns the unwrapped short value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

@@ -3,11 +3,11 @@
 # getStringList
 
 [jvm]\
-fun [getStringList](get-string-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtString](../-nbt-string/index.md)>
+fun [getStringList](get-string-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtString](../-nbt-string/index.md)&gt;
 
 Returns the [NbtList](../-nbt-list/index.md) of strings mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

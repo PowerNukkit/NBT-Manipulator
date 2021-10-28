@@ -7,7 +7,7 @@ fun [getCompound](get-compound.md)(key: [String](https://kotlinlang.org/api/late
 
 Returns the [NbtCompound](index.md) mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

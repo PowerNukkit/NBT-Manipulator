@@ -7,9 +7,9 @@ fun [getNullableLongArray](get-nullable-long-array.md)(key: [String](https://kot
 
 Returns the unwrapped long array value. The array will be linked and any modification will also change wrapper and the mapped value.
 
-Will return null if no value is mapped or it is mapped to an other type tag.
+Will return null if no value is mapped, or it is mapped to another type tag.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

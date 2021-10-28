@@ -3,7 +3,7 @@
 # LittleEndianDataInputStream
 
 [jvm]\
-class [LittleEndianDataInputStream](index.md)(**in**: [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)) : [FilterInputStream](https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html), [DataInput](https://docs.oracle.com/javase/8/docs/api/java/io/DataInput.html)
+class [LittleEndianDataInputStream](index.md)(in: [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)) : [FilterInputStream](https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html), [DataInput](https://docs.oracle.com/javase/8/docs/api/java/io/DataInput.html)
 
 Implementation of [DataInput](https://docs.oracle.com/javase/8/docs/api/java/io/DataInput.html) that reads data from an [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) using little endian byte order.
 
@@ -27,7 +27,7 @@ jvm
 
 | | |
 |---|---|
-| [LittleEndianDataInputStream](-little-endian-data-input-stream.md) | [jvm]<br>fun [LittleEndianDataInputStream](-little-endian-data-input-stream.md)(in: [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html))<br>the underlying input stream. |
+| [LittleEndianDataInputStream](-little-endian-data-input-stream.md) | [jvm]<br>fun [LittleEndianDataInputStream](-little-endian-data-input-stream.md)(in: [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)) |
 
 ## Functions
 
@@ -38,6 +38,7 @@ jvm
 | [mark](index.md#-930457612%2FFunctions%2F-1216412040) | [jvm]<br>open override fun [mark](index.md#-930457612%2FFunctions%2F-1216412040)(p0: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)) |
 | [markSupported](index.md#-1317173002%2FFunctions%2F-1216412040) | [jvm]<br>open override fun [markSupported](index.md#-1317173002%2FFunctions%2F-1216412040)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 | [read](index.md#-2105515219%2FFunctions%2F-1216412040) | [jvm]<br>open override fun [read](index.md#-2105515219%2FFunctions%2F-1216412040)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>open override fun [read](index.md#-1118350007%2FFunctions%2F-1216412040)(p0: [ByteArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>open override fun [read](index.md#110312553%2FFunctions%2F-1216412040)(p0: [ByteArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html), p1: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), p2: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [readAllBytes](index.md#1606115803%2FFunctions%2F-1216412040) | [jvm]<br>open fun [readAllBytes](index.md#1606115803%2FFunctions%2F-1216412040)(): [ByteArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html) |
 | [readBoolean](read-boolean.md) | [jvm]<br>open override fun [readBoolean](read-boolean.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 | [readByte](read-byte.md) | [jvm]<br>open override fun [readByte](read-byte.md)(): [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html) |
 | [readChar](read-char.md) | [jvm]<br>open override fun [readChar](read-char.md)(): [Char](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html) |
@@ -47,6 +48,7 @@ jvm
 | [readInt](read-int.md) | [jvm]<br>open override fun [readInt](read-int.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [readLine](read-line.md) | [jvm]<br>open override fun [readLine](read-line.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [readLong](read-long.md) | [jvm]<br>open override fun [readLong](read-long.md)(): [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) |
+| [readNBytes](index.md#712238470%2FFunctions%2F-1216412040) | [jvm]<br>open fun [readNBytes](index.md#712238470%2FFunctions%2F-1216412040)(p0: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [ByteArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>open fun [readNBytes](index.md#473965284%2FFunctions%2F-1216412040)(p0: [ByteArray](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html), p1: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), p2: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [readShort](read-short.md) | [jvm]<br>open override fun [readShort](read-short.md)(): [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html) |
 | [readUnsignedByte](read-unsigned-byte.md) | [jvm]<br>open override fun [readUnsignedByte](read-unsigned-byte.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [readUnsignedShort](read-unsigned-short.md) | [jvm]<br>open override fun [readUnsignedShort](read-unsigned-short.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
@@ -54,9 +56,10 @@ jvm
 | [reset](index.md#1422135752%2FFunctions%2F-1216412040) | [jvm]<br>open override fun [reset](index.md#1422135752%2FFunctions%2F-1216412040)() |
 | [skip](index.md#1448064341%2FFunctions%2F-1216412040) | [jvm]<br>open override fun [skip](index.md#1448064341%2FFunctions%2F-1216412040)(p0: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)): [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) |
 | [skipBytes](skip-bytes.md) | [jvm]<br>open override fun [skipBytes](skip-bytes.md)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [transferTo](index.md#-1649141576%2FFunctions%2F-1216412040) | [jvm]<br>open fun [transferTo](index.md#-1649141576%2FFunctions%2F-1216412040)(p0: [OutputStream](https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)): [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) |
 
 ## Properties
 
 | Name | Summary |
 |---|---|
-| [in](index.md#-361816713%2FProperties%2F-1216412040) | [jvm]<br>val [in](index.md#-361816713%2FProperties%2F-1216412040): [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) |
+| [in](index.md#-1385506818%2FProperties%2F-1216412040) | [jvm]<br>val [in](index.md#-1385506818%2FProperties%2F-1216412040): [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) |

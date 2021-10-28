@@ -3,11 +3,11 @@
 # getIntArrayList
 
 [jvm]\
-fun [getIntArrayList](get-int-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtIntArray](../-nbt-int-array/index.md)>
+fun [getIntArrayList](get-int-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtIntArray](../-nbt-int-array/index.md)&gt;
 
 Returns the [NbtList](../-nbt-list/index.md) of int arrays mapped to that key. The tag and it's value will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

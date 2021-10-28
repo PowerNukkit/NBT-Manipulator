@@ -7,7 +7,7 @@ fun [getFloat](get-float.md)(key: [String](https://kotlinlang.org/api/latest/jvm
 
 Returns the unwrapped float value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

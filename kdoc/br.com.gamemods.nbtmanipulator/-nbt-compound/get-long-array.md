@@ -7,7 +7,7 @@ fun [getLongArray](get-long-array.md)(key: [String](https://kotlinlang.org/api/l
 
 Returns the unwrapped long array value. The array will be linked and any modification will also change wrapper and the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

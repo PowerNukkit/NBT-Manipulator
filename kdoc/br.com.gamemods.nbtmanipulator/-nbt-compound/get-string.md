@@ -7,7 +7,7 @@ fun [getString](get-string.md)(key: [String](https://kotlinlang.org/api/latest/j
 
 Returns the unwrapped string value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

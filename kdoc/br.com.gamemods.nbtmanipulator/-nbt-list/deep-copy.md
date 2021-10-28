@@ -3,6 +3,6 @@
 # deepCopy
 
 [jvm]\
-open override fun [deepCopy](deep-copy.md)(): [NbtList](index.md)<[T](index.md)>
+open override fun [deepCopy](deep-copy.md)(): [NbtList](index.md)&lt;[T](index.md)&gt;
 
 Returns a new NbtList with all nested values copied deeply.

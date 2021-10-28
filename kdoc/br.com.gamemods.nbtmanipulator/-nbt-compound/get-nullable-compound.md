@@ -7,9 +7,9 @@ fun [getNullableCompound](get-nullable-compound.md)(key: [String](https://kotlin
 
 Returns the [NbtCompound](index.md) mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-Will return null if no value is mapped or it is mapped to an other type tag.
+Will return null if no value is mapped, or it is mapped to another type tag.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

@@ -5,7 +5,7 @@
 [jvm]\
 operator fun [set](set.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), value: [NbtTag](../-nbt-tag/index.md))
 
-Directly maps a [NbtTag](../-nbt-tag/index.md) to a key. The value must not be [NbtEnd](../-nbt-end/index.md). The given tag will be linked, so modifications to it will also affects the compound value.
+Directly maps a [NbtTag](../-nbt-tag/index.md) to a key. The value must not be [NbtEnd](../-nbt-end/index.md). The given tag will be linked, so modifications to it will also affect the compound value.
 
 [jvm]\
 operator fun [set](set.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), value: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))

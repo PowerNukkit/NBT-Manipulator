@@ -20,7 +20,7 @@ jvm
 |---|---|
 | value | A string with a structure like [0, -32, 48, 127] |
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

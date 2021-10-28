@@ -3,11 +3,11 @@
 # getLongArrayList
 
 [jvm]\
-fun [getLongArrayList](get-long-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtLongArray](../-nbt-long-array/index.md)>
+fun [getLongArrayList](get-long-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtLongArray](../-nbt-long-array/index.md)&gt;
 
 Returns the [NbtList](../-nbt-list/index.md) of long arrays mapped to that key. The tag and it's values will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

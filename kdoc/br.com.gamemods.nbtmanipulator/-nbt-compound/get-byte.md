@@ -7,7 +7,7 @@ fun [getByte](get-byte.md)(key: [String](https://kotlinlang.org/api/latest/jvm/s
 
 Returns the unwrapped byte value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

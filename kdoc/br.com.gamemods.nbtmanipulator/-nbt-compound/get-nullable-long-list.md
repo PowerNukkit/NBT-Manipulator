@@ -3,13 +3,13 @@
 # getNullableLongList
 
 [jvm]\
-fun [getNullableLongList](get-nullable-long-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtLong](../-nbt-long/index.md)>?
+fun [getNullableLongList](get-nullable-long-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtLong](../-nbt-long/index.md)&gt;?
 
 Returns the [NbtList](../-nbt-list/index.md) of longs mapped to that key. The tag will be linked and any modification will also change the mapped value.
 
-Will return null if no value is mapped or it is mapped to an other type tag.
+Will return null if no value is mapped, or it is mapped to another type tag.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

@@ -15,11 +15,11 @@ jvm
 |---|---|
 | signed | Signed value from 4.9e-324 to 1.7976931348623157e+308. NaN and Infinity are also accepted. |
 
-#### Throws
+## Throws
 
 | | |
 |---|---|
-| [kotlin.NumberFormatException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number-format-exception/index.html) | if the number is not within a valid range or if the string does not contains a valid number. |
+| [kotlin.NumberFormatException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number-format-exception/index.html) | if the number is not within a valid range or if the string does not contain a valid number. |
 
 [jvm]\
 fun [NbtDouble](-nbt-double.md)(value: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))

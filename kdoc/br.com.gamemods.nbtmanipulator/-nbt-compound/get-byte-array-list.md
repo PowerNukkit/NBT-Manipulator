@@ -3,11 +3,11 @@
 # getByteArrayList
 
 [jvm]\
-fun [getByteArrayList](get-byte-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)<[NbtByteArray](../-nbt-byte-array/index.md)>
+fun [getByteArrayList](get-byte-array-list.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [NbtList](../-nbt-list/index.md)&lt;[NbtByteArray](../-nbt-byte-array/index.md)&gt;
 
 Returns the [NbtList](../-nbt-list/index.md) of byte arrays mapped to that key. The tag and it's value will be linked and any modification will also change the mapped value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

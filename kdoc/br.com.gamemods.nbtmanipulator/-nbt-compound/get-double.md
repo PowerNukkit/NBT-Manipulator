@@ -7,7 +7,7 @@ fun [getDouble](get-double.md)(key: [String](https://kotlinlang.org/api/latest/j
 
 Returns the unwrapped double value.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

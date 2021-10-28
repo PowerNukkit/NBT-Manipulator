@@ -3,7 +3,7 @@
 # NbtFloat
 
 [jvm]\
-data class [NbtFloat](index.md)(**value**: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)) : [NbtTag](../-nbt-tag/index.md)
+data class [NbtFloat](index.md)(value: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)) : [NbtTag](../-nbt-tag/index.md)
 
 A tag which wraps a float value.
 
@@ -19,7 +19,7 @@ A tag which wraps a float value.
 | Name | Summary |
 |---|---|
 | [deepCopy](deep-copy.md) | [jvm]<br>open override fun [deepCopy](deep-copy.md)(): [NbtFloat](index.md)<br>Returns a new wrapper with the current value. |
-| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type and it's value, appropriated for developer inspections. |
+| [toString](../-nbt-tag/to-string.md) | [jvm]<br>override fun [toString](../-nbt-tag/to-string.md)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>A technical string representation of this tag, containing the tag type, and it's value, appropriated for developer inspections. |
 
 ## Properties
 

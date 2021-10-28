@@ -3,7 +3,7 @@
 # NbtList
 
 [jvm]\
-fun <[T](index.md) : [NbtTag](../-nbt-tag/index.md)> [NbtList](-nbt-list.md)(tags: [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)<[T](index.md)>)
+fun &lt;[T](index.md) : [NbtTag](../-nbt-tag/index.md)&gt; [NbtList](-nbt-list.md)(tags: [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)&lt;[T](index.md)&gt;)
 
 Constructs a [NbtList](index.md) with the same contents of the given [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html).
 
@@ -16,16 +16,16 @@ The tags in the list will be linked so any modification will also change this ta
 [jvm]\
 fun [NbtList](-nbt-list.md)()
 
-Creates a empty list.
+Creates an empty list.
 
 [jvm]\
-fun <[T](index.md) : [NbtTag](../-nbt-tag/index.md)> [NbtList](-nbt-list.md)(vararg tags: [T](index.md))
+fun &lt;[T](index.md) : [NbtTag](../-nbt-tag/index.md)&gt; [NbtList](-nbt-list.md)(vararg tags: [T](index.md))
 
-fun <[T](index.md) : [NbtTag](../-nbt-tag/index.md)> [NbtList](-nbt-list.md)(tags: [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)<[T](index.md)>)
+fun &lt;[T](index.md) : [NbtTag](../-nbt-tag/index.md)&gt; [NbtList](-nbt-list.md)(tags: [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)&lt;[T](index.md)&gt;)
 
-fun <[T](index.md) : [NbtTag](../-nbt-tag/index.md)> [NbtList](-nbt-list.md)(tags: [Sequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html)<[T](index.md)>)
+fun &lt;[T](index.md) : [NbtTag](../-nbt-tag/index.md)&gt; [NbtList](-nbt-list.md)(tags: [Sequence](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html)&lt;[T](index.md)&gt;)
 
-fun <[T](index.md) : [NbtTag](../-nbt-tag/index.md)> [NbtList](-nbt-list.md)(tags: [NbtList](index.md)<[T](index.md)>)
+fun &lt;[T](index.md) : [NbtTag](../-nbt-tag/index.md)&gt; [NbtList](-nbt-list.md)(tags: [NbtList](index.md)&lt;[T](index.md)&gt;)
 
 Uses all tags as initial value of this list. Make sure to use the same class in all values.
 
@@ -42,7 +42,7 @@ jvm
 |---|---|
 | value | A string with a structure like [NbtInt(0), NbtInt(-32), NbtInt(48), NbtInt(127)] |
 
-#### Throws
+## Throws
 
 | | |
 |---|---|

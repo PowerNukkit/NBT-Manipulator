@@ -5,9 +5,9 @@
 [jvm]\
 fun [getNullableInt](get-nullable-int.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)?
 
-Returns the unwrapped int value or null if no value is mapped or it is mapped to an other type tag.
+Returns the unwrapped int value or null if no value is mapped, or it is mapped to another type tag.
 
-#### Throws
+## Throws
 
 | | |
 |---|---|
