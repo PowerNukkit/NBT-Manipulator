@@ -2,6 +2,8 @@
 
 This is a Kotlin/Java library that allows you to read and write NBT files and data in a clean and simple way.
 
+Can be used both for Minecraft Java and Minecraft Bedrock Edition NBT structures.
+
 Here you can find the library documentation:
 * [Java Documentation](https://powernukkit.github.io/NBT-Manipulator/javadoc/br/com/gamemods/nbtmanipulator/package-summary.html)
 * [Kotlin Documentation](https://powernukkit.github.io/NBT-Manipulator/kdoc/br.com.gamemods.nbtmanipulator/index.html)
@@ -25,13 +27,25 @@ The library is shared in the maven center, so you don't need to declare any cust
 
 ### Gradle
 
-```groovy
+#### Kotlin DSL
+```kotlin
 repositories {
-    mavenCentral() // or jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    compile 'br.com.gamemods:nbt-manipulator:3.0.0'
+    implementation("br.com.gamemods:nbt-manipulator:3.1.0")
+}
+```
+
+#### Groovy DSL
+```groovy
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'br.com.gamemods:nbt-manipulator:3.1.0'
 }
 ```
 
@@ -42,7 +56,7 @@ dependencies {
     <dependency>
       <groupId>br.com.gamemods</groupId>
       <artifactId>nbt-manipulator</artifactId>
-      <version>3.0.0</version>
+      <version>3.1.0</version>
     </dependency>
 </dependencies>
 ```
@@ -50,11 +64,11 @@ dependencies {
 ### Ivy
 
 ```xml
-<dependency org="br.com.gamemods" name="nbt-manipulator" rev="3.0.0"/>
+<dependency org="br.com.gamemods" name="nbt-manipulator" rev="3.1.0"/>
 ```
 
 ### Direct JAR
-Download it from [maven central](http://central.maven.org/maven2/br/com/gamemods/nbt-manipulator/).
+Download it from [maven central](https://search.maven.org/artifact/br.com.gamemods/nbt-manipulator).
 
 ## Examples
 
