@@ -7,8 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 Click the link above to see the future.
 
+### Added
+- Automatic Java Jigsaw Module named `br.com.gamemods.nbtmanipulator`
+- `NbtIO.writeNbtTagDirectly()` and `NbtIO.readNbtTagDirectly()` allowing reading and writing arbitrary tags.
+
 ### Changed
 - Updated to Kotlin `1.5.31`
+- The source code was split in multiple files and now uses the explicit API feature
 
 ## [3.0.0] - 2021-08-12
 [Downloads from maven central.][Download 3.0.0]
